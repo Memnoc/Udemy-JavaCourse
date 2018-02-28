@@ -1,4 +1,4 @@
-package Classes.challenges;
+package Classes.challengespart1;
 
 public class ClassPart1ChallengeRunner {
 

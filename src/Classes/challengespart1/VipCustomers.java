@@ -1,4 +1,4 @@
-package Classes.challenges;
+package Classes.challengespart1;
 
 // Create a new class VipCustomer
 // it should have 3 fields name, credit limit, and email address.

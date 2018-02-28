@@ -1,4 +1,4 @@
-package Classes.challenges;
+package Classes.challengespart1;
 
 // Create a new class for a bank account
 // Create fields for the account number, balance, customer name, email and phone number.
