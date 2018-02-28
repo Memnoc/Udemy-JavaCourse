@@ -1,4 +1,4 @@
-package Classes.challengespart2;
+package Inheritance.challenge;
 
 // Challenge.
 // Start with a base class of a Vehicle, then create a Car class that inherits from this base class.

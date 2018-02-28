@@ -1,4 +1,4 @@
-package Classes.challengespart2;
+package Inheritance.challenge;
 
 public class Car extends Vehicle {
 
