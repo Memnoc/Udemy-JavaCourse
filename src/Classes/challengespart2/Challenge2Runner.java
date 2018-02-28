@@ -13,7 +13,7 @@ public class Challenge2Runner {
     public static void main(String[] args) {
 
         Couga couga = new Couga(24);
-        couga.steer(10, "left");
+        couga.steer(10, "right");
         couga.accelerateCar(10);
         couga.accelerateCar(20);
         couga.accelerateCar(-10);
