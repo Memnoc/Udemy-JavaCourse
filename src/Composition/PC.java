@@ -26,7 +26,7 @@ public class PC {
         monitor.drawPixelAt(1200,50,"yellow"); // instead of using getters, you can assign a variable and access that
     }
 
-    // We don't need getters anymore at this point as we are acessing the methods via variables.
+    // We don't need getters anymore at this point as we are accessing the methods via variables.
 
 //    private Case getTheCase() {
 //        return theCase;
