@@ -7,24 +7,36 @@ package Composition;
 public class PC {
 
     private Case theCase;
-    private Monitor monitors;
+    private Monitor monitor;
     private Motherboard motherboard;
 
-    public PC(Case theCase, Monitor monitors, Motherboard motherboard) {
+    public PC(Case theCase, Monitor monitor, Motherboard motherboard) {
         this.theCase = theCase;
-        this.monitors = monitors;
+        this.monitor = monitor;
         this.motherboard = motherboard;
     }
 
-    public Case getTheCase() {
-        return theCase;
+    public void powerUp () {
+        theCase.pressPowerButton(); // instead of using getters, you can assign a variable and access that
+        drawLogo();
     }
 
-    public Monitor getMonitors() {
-        return monitors;
+    private void drawLogo(){
+        // Fancy graphic animation
+        monitor.drawPixelAt(1200,50,"yellow"); // instead of using getters, you can assign a variable and access that
     }
 
-    public Motherboard getMotherboard() {
-        return motherboard;
-    }
+    // We don't need getters anymore at this point as we are acessing the methods via variables.
+
+//    private Case getTheCase() {
+//        return theCase;
+//    }
+//
+//    private Monitor getMonitors() {
+//        return monitor;
+//    }
+//
+//    private Motherboard getMotherboard() {
+//        return motherboard;
+//    }
 }

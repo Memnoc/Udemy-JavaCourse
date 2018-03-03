@@ -15,13 +15,17 @@ public class CompositionRunner {
 
         // and this is how you assemble it together
         PC thePC = new PC(theCase, theMonitor, theMotherboard);
+        thePC.powerUp();
 
         // This is how you call methods from other classes
         // Basically, you acces the getter that returns the class in for of an object
         // This is essentially allowing you to access all the methods for the class
-        thePC.getTheCase().pressPowerButton();
-        thePC.getMotherboard().loadProgram("Windows 10");
-        thePC.getMonitors().drawPixelAt(1500, 1200, "red");
+
+        // Having deleted those methods in PC class, we don't need them anymore now
+
+//        thePC.getTheCase().pressPowerButton();
+//        thePC.getMotherboard().loadProgram("Windows 10");
+//        thePC.getMonitors().drawPixelAt(1500, 1200, "red");
 
     }
 }
