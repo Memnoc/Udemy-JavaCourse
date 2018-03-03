@@ -1,0 +1,11 @@
+Encapsulation (definition) ->
+Encapsulation is the mechanism that allows you to restrict access to certain component of the object you are creating.
+It's a way to protect the member of a class blocking unauthorized access to them.
+This is not a concept that concerns security, although it seems so.
+Encapsulation is a way of hiding the inner working of a class from another class, thus allowing you to have more control over that class,
+and also allowing you to change code more easily without breaking any major mechanism.
+
+Potential risks ->
+A). By opening the access to your fields directly, you are exposing your application to be potentially accessed in way you don't want to
+or you didn't account for in your code, causing all sort of issues.
+B). Changing a name, for example a field name into your non-encapsulated class will reflect to the other classes using that field name.
