@@ -81,7 +81,7 @@ class ForgettableMovies extends Movie {
 
 
 
-public class Plymorphism {
+public class Polymorphism {
 
     public static void main(String[] args) {
 
@@ -137,5 +137,3 @@ public class Plymorphism {
         return null;
     }
 }
-
-
