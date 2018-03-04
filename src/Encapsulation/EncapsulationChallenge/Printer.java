@@ -11,7 +11,7 @@ package Encapsulation.EncapsulationChallenge;
 
 public class Printer {
 
-    private int tonerLevel = 100;
+    private int tonerLevel;
     private boolean duplex;
     private int numPages;
 
