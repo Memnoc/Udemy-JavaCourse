@@ -4,15 +4,16 @@ public class HealthyBurger extends Hamburger {
 
     private boolean mHasMayo;
     private boolean mHasPickles;
-    private int mHealthyBurgerPrice;
-    private int mHealthyExtrasPrice;
+    private double mHealthyBurgerPrice;
+    private double mHealthyExtrasPrice;
 
 
-    public HealthyBurger(String mName, String mBreadType, String mMeatType, int mPrice, boolean mHasMayo, boolean mHasPickles) {
+    public HealthyBurger(String mName, String mBreadType, String mMeatType, double mPrice, boolean mHasMayo, boolean mHasPickles) {
         super(mName, mBreadType, mMeatType, mPrice);
         this.mHasMayo = false;
         this.mHasPickles = false;
     }
+
 
 
 
