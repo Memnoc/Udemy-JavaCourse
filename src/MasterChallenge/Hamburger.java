@@ -8,10 +8,10 @@ public class Hamburger {
     private String mBreadType;
     private String mMeatType;
     private double mPrice;
-    private boolean mHasLettuce;
-    private boolean mHasTomatoes;
-    private boolean mHasOnions;
-    private boolean mHasCarrots;
+    private String mLettuce;
+    private String mTomatoes;
+    private String mOnions;
+    private String mCarrots;
 
     public Hamburger(String mName, String mBreadType, String mMeatType, double mPrice) {
         this.mName = mName;
@@ -20,39 +20,35 @@ public class Hamburger {
         this.mPrice = mPrice;
     }
 
-    int menu = 0;
 
-    public double additions(int menu) {
-        double lettuce = 0;
-        double carrots  =0;
-        double onions = 0;
-        double tomatoes = 0;
-        switch (menu) {
-            case 1:
-                menu = 1;
-                lettuce = 1.0;
-                double menu1 = (int) (this.mPrice + lettuce);
-                System.out.println("you have selected: " + lettuce + " your total is " + menu1 + " Would you like any extra?");
-                return menu1;
-            case 2:
-                menu = 2;
-                carrots = 1.0;
-                double menu2 = (int) (this.mPrice + lettuce + carrots);
-                System.out.println("you have selected: " + lettuce + carrots + " your total is" + menu2 + " Would you like any extra?");
-                return menu2;
-            case 3:
-                menu = 3;
-                double menu3 = (int) (this.mPrice + lettuce + carrots + onions);
-                System.out.println("you have selected: " + lettuce + carrots + onions + " your total is" + menu3 + " Would you like any extra?");
-                return menu3;
-            case 4:
-                menu = 4;
-                double menu4 = (int) (this.mPrice + lettuce + carrots + onions + tomatoes);
-                System.out.println("you have selected: " + lettuce + carrots + onions + tomatoes + " your total is" + menu4 + " Would you like any extra?");
-                return menu4;
+
+    String extra = "";
+
+    public void additions(String extra) {
+        switch (extra) {
+            case "Lettuce":
+                double lettuce = (this.mPrice += 1);
+                System.out.println("You have selected lettuce, which is 1.0 extra dollar. Your total is " + lettuce + " dollars. Would you like any extra?");
+                break;
+            case "Carrots":
+                double carrots = (this.mPrice += 1);
+                System.out.println("You have selected carrots, which is 1.0 extra dollar. Your total is " + carrots + " dollars. Would you like any extra?");
+                break;
+            case "Onions":
+                double onions = (this.mPrice += 1);
+                System.out.println("You have selected onions, which is 1.0 extra dollar. Your total is " + onions + " dollars. Would you like any extra?");
+                break;
+            case "Tomatoes":
+                double tomatoes = (this.mPrice += 1);
+                System.out.println("You have selected tomatoes, which is 1.0 extra dollar. Your total is " + tomatoes + " dollars. Would you like any extra?");
+                break;
+            case "AllClassic":
+                double all = (this.mPrice += 4);
+                System.out.println("You have selected all the extras, which is four extra dollar. Your total is " + all + " dollars. Enjoy!!");
+                break;
                 default:
                     System.out.println("You don't want any extra.");
-                    return menu;
+                    break;
 
         }
 
@@ -78,19 +74,19 @@ public class Hamburger {
         return mPrice;
     }
 
-    public boolean ismHasLettuce() {
-        return mHasLettuce;
+    public String getLettuce() {
+        return mLettuce;
     }
 
-    public boolean ismHasTomatoes() {
-        return mHasTomatoes;
+    public String getTomatoes() {
+        return mTomatoes;
     }
 
-    public boolean ismHasOnions() {
-        return mHasOnions;
+    public String getOnions() {
+        return mOnions;
     }
 
-    public boolean ismHasCarrots() {
-        return mHasCarrots;
+    public String getCarrots() {
+        return mCarrots;
     }
 }

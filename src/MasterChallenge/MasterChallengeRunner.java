@@ -35,6 +35,7 @@ public class MasterChallengeRunner {
 
         Hamburger hamburger = new Hamburger( "classic", "sesame", "cow", 5.00 );
         System.out.println("The price of the classic burger is: " + hamburger.getmPrice() + " Would you like any extras?");
-        hamburger.additions( 1 );
+        hamburger.additions("Lettuce");
+
     }
 }
