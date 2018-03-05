@@ -1,7 +1,7 @@
 package Encapsulation;
 
 // This class is instead using Encapsulation, and this allows more control over what can be set from outside the class.
-// The if statement in hte constructr, for example, doesn't allow the hitPoints value to be initialized if it's not a reault
+// The if statement in hte constructor, for example, doesn't allow the hitPoints value to be initialized if it's not a reault
 // included within 1 and 100
 
 public class EnhancedPlayer {
