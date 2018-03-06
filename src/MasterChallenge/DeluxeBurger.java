@@ -17,7 +17,7 @@ class DeluxeBurger extends Hamburger {
     }
 
     @Override
-    public void additions(String extra) {
+    public void additions(String extra, double extraPrice) {
         System.out.println("You cannot add extras to the Deluxe Burgers!");
     }
 }

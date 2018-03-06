@@ -28,23 +28,23 @@ public class Hamburger {
 
     }
 
-    public void additions(String extra) {
+    public void additions(String extra, double extraPrice) {
         switch (extra) {
             case "Lettuce":
-                double lettuce = (this.mPrice += 1);
-                System.out.println("You have selected lettuce, which is 1.0 extra dollar. Your total is " + lettuce + " dollars. Would you like any extra?");
+                double lettuce = (this.mPrice += extraPrice);
+                System.out.println("You have selected lettuce for " + extraPrice + "extra dollar. Your total is " + lettuce + " dollars. Would you like any extra?");
                 break;
             case "Carrots":
-                double carrots = (this.mPrice += 1);
-                System.out.println("You have selected carrots, which is 1.0 extra dollar. Your total is " + carrots + " dollars. Would you like any extra?");
+                double carrots = (this.mPrice += extraPrice);
+                System.out.println("You have selected lettuce for " + extraPrice + "extra dollar. Your total is " + carrots + " dollars. Would you like any extra?");
                 break;
             case "Onions":
-                double onions = (this.mPrice += 1);
-                System.out.println("You have selected onions, which is 1.0 extra dollar. Your total is " + onions + " dollars. Would you like any extra?");
+                double onions = (this.mPrice += extraPrice);
+                System.out.println("You have selected lettuce for " + extraPrice + "extra dollar. Your total is " + onions + " dollars. Would you like any extra?");
                 break;
             case "Tomatoes":
-                double tomatoes = (this.mPrice += 1);
-                System.out.println("You have selected tomatoes, which is 1.0 extra dollar. Your total is " + tomatoes + " dollars. Would you like any extra?");
+                double tomatoes = (this.mPrice += extraPrice);
+                System.out.println("You have selected lettuce for " + extraPrice + "extra dollar. Your total is " + tomatoes + " dollars. Would you like any extra?");
                 break;
             case "AllClassic":
                 double all = (this.mPrice += 4);
