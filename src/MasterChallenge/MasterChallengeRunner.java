@@ -37,6 +37,16 @@ public class MasterChallengeRunner {
         System.out.println("The price of the classic burger is: " + hamburger.getmPrice() + " Would you like any extras?");
         hamburger.additions("Lettuce");
 
+        HealthyBurger healthyBurger = new HealthyBurger( "Healthy Burger", "Brown wholemeal bread", " Triple Sirloin", 6.00, false, false );
+        System.out.println("The price of the Healthy Burger is: " + healthyBurger.getmPrice() + " Would you like any extras?");
+        healthyBurger.additions( "Onions" );
+        healthyBurger.extraAdditions( "Mayo" );
+        healthyBurger.extraAdditions( "Pickles" );
+        System.out.println("The price of the healthy burger is " + healthyBurger.getmHealthyBurgerPrice());
+        DeluxeBurger deluxeBurger = new DeluxeBurger( "Deluxe Burger", "White bread", "fillet", 9.00, true);
+        System.out.println("The price of the deluxe burger is: " + deluxeBurger.getDeluxeBurgerPrice() + " Would you like any extras?");
+        deluxeBurger.additions( "Lettuce" );
+
 
 
     }

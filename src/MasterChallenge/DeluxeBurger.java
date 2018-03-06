@@ -1,11 +1,23 @@
 package MasterChallenge;
 
-public class DeluxeBurger extends Hamburger {
+class DeluxeBurger extends Hamburger {
 
     private boolean chipsAndDrink;
+    private double deluxeBurgerPrice;
 
-    public DeluxeBurger(String mName, String mBreadType, String mMeatType, int mPrice, boolean chipsAndDrink) {
+
+    DeluxeBurger(String mName, String mBreadType, String mMeatType, double mPrice, boolean chipsAndDrink) {
         super(mName, mBreadType, mMeatType, mPrice);
         this.chipsAndDrink = true;
+        this.deluxeBurgerPrice =  mPrice;
+    }
+
+    public double getDeluxeBurgerPrice() {
+        return deluxeBurgerPrice;
+    }
+
+    @Override
+    public void additions(String extra) {
+        System.out.println("You cannot add extras to the Deluxe Burgers!");
     }
 }

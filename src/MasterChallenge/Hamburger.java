@@ -13,7 +13,7 @@ public class Hamburger {
     private String mOnions;
     private String mCarrots;
 
-    public Hamburger(String mName, String mBreadType, String mMeatType, double mPrice) {
+    Hamburger(String mName, String mBreadType, String mMeatType, double mPrice) {
         this.mName = mName;
         this.mBreadType = mBreadType;
         this.mMeatType = mMeatType;
@@ -23,6 +23,10 @@ public class Hamburger {
 
 
     String extra = "";
+
+    private Hamburger() {
+
+    }
 
     public void additions(String extra) {
         switch (extra) {
@@ -45,6 +49,9 @@ public class Hamburger {
             case "AllClassic":
                 double all = (this.mPrice += 4);
                 System.out.println("You have selected all the extras, which is four extra dollar. Your total is " + all + " dollars. Enjoy!!");
+                break;
+            case "Deluxe":
+                System.out.println("Oops! You cannot add any extra to the Deluxe Combo!");
                 break;
                 default:
                     System.out.println("You don't want any extra.");
