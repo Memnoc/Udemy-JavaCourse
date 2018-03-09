@@ -59,26 +59,35 @@ public class ArrayListRunner {
         groceryList.addGroceryItem(scanner.nextLine());
     }
 
+    // Part 2:
+    // Instead of asking for a number here, we want to ask what is the current
+    // grocery item that we want to modify
+
     public static void modifyItem(){
-        System.out.print("Enter item number: ");
-        int itemNo = scanner.nextInt();
-        scanner.nextLine();
-        System.out.println("Enter replacement item: ");
-        String newItem = scanner.nextLine();
-        groceryList.modifyGroceryItem(itemNo-1, newItem);
+        System.out.print("Current item name: ");
+        //int itemNo = scanner.nextInt();
+        String itemNo = scanner.nextLine(); // old item number
+        //scanner.nextLine();
+        System.out.println("Enter new item: ");
+        String newItem = scanner.nextLine(); // new item number
+        groceryList.modifyGroceryItem(itemNo, newItem);
     }
 
     public static void removeItem(){
-        System.out.print("Enter item number: ");
-        int itemNo = scanner.nextInt();
-        scanner.nextLine();
-        groceryList.removeGroceryItem(itemNo-1);
+        System.out.print("Enter item name: ");
+        //int itemNo = scanner.nextInt();
+        String itemNo  =scanner.nextLine();
+        //scanner.nextLine();
+        groceryList.removeGroceryItem(itemNo);
     }
 
+    //Part 2:
+    // changing groceryList.findItem(searchItem) != null)
+    // to (groceryList.onFile(searchItem))
     public static void searchForItem(){
         System.out.println("Item to search for: ");
         String searchItem = scanner.nextLine();
-        if (groceryList.findItem(searchItem) != null) {
+        if (groceryList.onFile(searchItem)) {
             System.out.println("Found " + searchItem + " in our grocery list");
         } else {
             System.out.println(searchItem + " is not int the shopping list");
