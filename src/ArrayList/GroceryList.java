@@ -29,6 +29,10 @@ public class GroceryList {
 
     }
 
+    public ArrayList<String> getGroceryList() {
+        return groceryList;
+    }
+
     // Output all the items of the ArrayList
     // groceryList.size(); will return the exact number of elements in the array
     // groceryList.get(); will access the elements

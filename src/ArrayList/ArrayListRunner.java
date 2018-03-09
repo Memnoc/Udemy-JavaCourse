@@ -1,5 +1,6 @@
 package ArrayList;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class ArrayListRunner {
@@ -36,6 +37,8 @@ public class ArrayListRunner {
                     searchForItem();
                     break;
                 case 6:
+                    processArrayList();
+                case 7:
                     quit = true;
                     break;
             }
@@ -92,6 +95,27 @@ public class ArrayListRunner {
         } else {
             System.out.println(searchItem + " is not int the shopping list");
         }
+    }
+
+    // Very quick way to copy an Array with array.addAll(); method
+
+    public static void processArrayList() {
+        ArrayList<String> newArray = new ArrayList<String>();
+        newArray.addAll( groceryList.getGroceryList());
+
+        // Quicker way
+        // If you know the ArrayList that you want to copy at the point where you are creating the new ArrayList
+        // You can use groceryList.getGroceryList()
+        // and that will actually create brand new ArrayList that is actually initialized to the contents of
+        // this groceryList.getGroceryList() ArrayList.
+
+        ArrayList<String> nextArray = new ArrayList<>(groceryList.getGroceryList());
+
+        // If for some reason you wanted to take the contents of the ArrayList and convert it back to a regular Array
+        // this is the way of doing it
+
+        String[] myArr = new String[groceryList.getGroceryList().size()];
+        myArr = groceryList.getGroceryList().toArray(myArr);
     }
 
 
