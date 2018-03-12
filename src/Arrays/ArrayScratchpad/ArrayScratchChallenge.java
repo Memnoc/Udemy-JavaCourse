@@ -12,6 +12,7 @@ package Arrays.ArrayScratchpad;
 // you will have to figure out how to copy the array elements from the passed array into a new
 // array and sort them and return the new sorted array.
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class ArrayScratchChallenge {
@@ -28,7 +29,7 @@ public class ArrayScratchChallenge {
     }
 
     public static int[] getIntegers(int number) {
-        System.out.println("Enter " + number +  " integer values");
+        System.out.println("Enter " + number +  " integer values:\r");
         int[] values = new int[number];
         for (int i = 0; i <values.length ; i++) {
             values[i] = scanner.nextInt();
@@ -43,10 +44,12 @@ public class ArrayScratchChallenge {
     }
 
     public static int[] sortIntegers(int[] unsortedArray){
-        int[] sortedArray = new int[unsortedArray.length];
-        for (int i = 0; i <unsortedArray.length ; i++) {
-            sortedArray[i] = unsortedArray[i];
-        }
+//        int[] sortedArray = new int[unsortedArray.length];
+//        for (int i = 0; i <unsortedArray.length ; i++) {
+//            sortedArray[i] = unsortedArray[i];
+//        }
+        // This can also be done as
+        int[] sortedArray = Arrays.copyOf(unsortedArray, unsortedArray.length);
         boolean flag = true;
         int temp;
         while (flag) {

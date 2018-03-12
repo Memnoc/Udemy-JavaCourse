@@ -1,24 +1,24 @@
 package ArrayList.challenge;
-import java.util.Scanner;
 
 public class Contacts {
 
-    private String mName;
-    private int mPhoneNumber;
+    private String name;
+    private String phoneNumber;
 
-    private static Scanner scanner =  new Scanner( System.in );
-    private static MobilePhone mobilePhone = new MobilePhone();
-
-    public static void main(String[] args) {
-
-
-
+    public Contacts(String name, String phoneNumber) {
+        this.name = name;
+        this.phoneNumber = phoneNumber;
     }
 
-    public static void addItem() {
-        System.out.println("Enter the contact");
-        mobilePhone.addContacts(scanner.nextLine());
+    public String getName() {
+        return name;
     }
 
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
 
+    public static Contacts getNameAndNumber(String name, String phoneNumber){
+        return new Contacts(name, phoneNumber);
+    }
 }
