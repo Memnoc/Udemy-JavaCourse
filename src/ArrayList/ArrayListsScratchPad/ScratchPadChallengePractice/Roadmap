@@ -1,0 +1,27 @@
+// ArrayList challenge roadmap
+
+
+// 1 - Create the contact Class: constructor, getters, static method to create record without having to intialize the class fields all the time
+// with having to create object of Contacts all the time
+
+// 2 - Create the MobilePhone Class: ArrayList of type Contact, constructor, initialize the ArrayList here
+// methods: addNewContact(boolean) ->
+// - check if the contact you're adding already exists (use the name for that)
+// - if it does return false and an error message
+// - if it doesn't, use a built-in method to add the contact and return true with a success message
+
+// findContact(int) 1 -> return an integer representing the index of the element
+// better to make this private cause we don't need to expose it
+
+// findContact(int) 2 -> return an int but accept a String
+// loop through the whole list
+// extract the names from it
+// compare it to the name you have passed
+// return the index (int)
+// if you don't find anything return a -1;
+
+// updateContact(boolean) -> accept two String oldContact and newContact
+// find the oldContact position
+// check if exists
+// if it doesn't, false, and message
+// if it does, set() position and newContact message and true
