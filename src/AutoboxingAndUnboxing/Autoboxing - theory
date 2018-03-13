@@ -1,0 +1,29 @@
+Autoboxing is the concept that allows you to use non-primitive types as primitives in ArrayList.
+In other words, an ArrayList like this cannot exists:
+
+ArrayList<int> myArray = new ArrayList<int>();
+
+This is an error, and Java will flag a warning because the part <> contains a primitive type int
+This, instead, is possible:
+
+ArrayList<String> myArray = new ArrayList<String>();
+
+Why int no but String yes?
+The answer is that String is in fact a class, while int is a primitive type, and as said, ArrayLists cannot accept primitive types as data type, only objects.
+
+How to solve this?
+The answer is using Autoboxing, which is there to let you use classes dedicated to each primitive type (int, double, etc.) that can be used as data types when is normally not allowed.
+
+Example:
+
+ArrayList<Integer> myArray = new Array<Integer>();
+
+This is correct, and will not raise an error.
+This will allow to use integers as such:
+
+Integer integerValue = new Integer(33);
+
+In other words, Autoboxing is the process that allows you to convert a base primitive type like int
+into a class like Integer.
+
+Unboxing, instead is the opposite. It's the process where a class like Integer is converted back into a base primitve data type like int.
