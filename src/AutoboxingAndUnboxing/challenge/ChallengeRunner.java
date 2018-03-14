@@ -10,7 +10,7 @@ public class ChallengeRunner {
     private static Branch branch = new Branch("Ulster1", "Tallaght", "UlsterBank");
 
     public static void main(String[] args) {
-        addNewCustomer();
+//        addNewCustomer();
 //        System.out.println("Customer balance is " + branch.getAccountBalance());
 //        branch.deposit(150);
 //        System.out.println("Customer balance is " + branch.getAccountBalance());
