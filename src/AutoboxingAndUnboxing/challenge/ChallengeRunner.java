@@ -11,6 +11,14 @@ public class ChallengeRunner {
 
     public static void main(String[] args) {
         addNewCustomer();
+//        System.out.println("Customer balance is " + branch.getAccountBalance());
+//        branch.deposit(150);
+//        System.out.println("Customer balance is " + branch.getAccountBalance());
+//        branch.withdraw(100);
+//        System.out.println("Customer balance is " + branch.getAccountBalance());
+
+
+
 
 
 
@@ -23,7 +31,10 @@ public class ChallengeRunner {
         String branchName = scanner.nextLine();
         Customer newCustomer = Customer.createCustomer("Jim", false);
         if(branch.addBranchCustomer(newCustomer)) {
-            System.out.println("New customer added: name = " + name + " branch = " + branchName);
+            System.out.println("New customer added: name = " +
+                    name + "\nbranch = " +
+                    branchName +
+                    "\nInitial deposit: " + branch.getAccountBalance());
         } else {
             System.out.println("Cannot add, " + name + " already on file");
         }

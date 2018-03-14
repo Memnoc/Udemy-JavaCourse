@@ -41,12 +41,12 @@ public class Branch {
         return new Branch(name, location, master);
     }
 
-    private double withdraw(double sum) {
-        return this.accountBalance += sum;
+    public double withdraw(double sum) {
+        return this.accountBalance -= sum;
     }
 
-    private double deposit(double sum) {
-        return this.accountBalance -= sum;
+    public double deposit(double sum) {
+        return this.accountBalance += sum;
     }
 
     public boolean addBranchCustomer (Customer customer) {
@@ -55,10 +55,11 @@ public class Branch {
             return false;
         }
         this.branchCustomers.add(customer);
+        deposit(100);
         return true;
     }
 
-    private int findCustomer(String contactName) {
+    public int findCustomer(String contactName) {
         for(int i=0; i<this.branchCustomers.size(); i++) {
             Customer customer = this.branchCustomers.get(i);
             if(customer.getName().equals(contactName)) {
