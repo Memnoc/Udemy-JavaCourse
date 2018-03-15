@@ -37,8 +37,8 @@ public class Branch {
         return branchMasterBank;
     }
 
-    private static Branch createBranch(String name, String location, String master) {
-        return new Branch(name, location, master);
+    public static Branch createBranch (String branchName, String branchLocation, String branchMasterBank) {
+        return new Branch(branchName, branchLocation, branchMasterBank);
     }
 
     public double withdraw(double sum) {
@@ -49,7 +49,7 @@ public class Branch {
         return this.accountBalance += sum;
     }
 
-    public boolean addBranchCustomer (Customer customer) {
+    public boolean addCustomer(Customer customer) {
         if (findCustomer(customer.getName()) >=0) {
             System.out.println("Contact is already on file");
             return false;
@@ -67,6 +67,13 @@ public class Branch {
             }
         }
         return -1;
+    }
+
+    public void printListOfCustomers() {
+        System.out.println("You have " + branchCustomers.size() + " customers in your list");
+        for (int i = 0; i < branchCustomers.size(); i++) {
+            System.out.println((i+1) + ". " + branchCustomers.get(i).getName());
+        }
     }
 
 }
