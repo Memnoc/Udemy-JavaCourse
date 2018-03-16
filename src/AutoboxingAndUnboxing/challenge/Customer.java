@@ -4,25 +4,20 @@ import java.util.ArrayList;
 
 public class Customer {
 
-    private boolean hasBranch = false;
-    private String mName;
-    private ArrayList<Double> transactions;
+    private String name;
+    private ArrayList<Double> transaction;
 
-    public Customer(String name, boolean hasBranch) {
-        this.mName = name;
-        this.hasBranch = false;
-        this.transactions = new ArrayList<Double>();
+    public Customer(String name, double amount) {
+        this.name = name;
+        this.transaction = new ArrayList<Double>();
     }
 
     public String getName() {
-        return mName;
+        return name;
     }
 
-    public boolean isHasBranch() {
-        return hasBranch;
+    public ArrayList<Double> getTransaction() {
+        return transaction;
     }
 
-    public static Customer createCustomer(String name, boolean hasBranch) {
-        return new Customer(name, hasBranch);
-    }
 }
