@@ -6,9 +6,13 @@ public class Branch {
 
     private String name;
     private ArrayList<Customer> customer;
-    private double amount;
 
-    public String getName() {
+    public Branch(String name) {
+        this.name = name;
+        this.customer = new ArrayList<Customer>();
+    }
+
+    public String getBranchName() {
         return name;
     }
 
@@ -16,32 +20,42 @@ public class Branch {
         return customer;
     }
 
-    public Branch(String name) {
-        this.name = name;
-        this.customer = new ArrayList<Customer>();
-
-
+    public boolean addNewCustomer(String customerName, double initialAmount) {
+        if (findCustomer(customerName) != null) {
+            return false;
+        }
+        this.customer.add(new Customer(customerName, initialAmount));
+        System.out.println("new customer added " + customerName + " and amount is " + initialAmount);
+        return true;
     }
 
-    public void addNewCustomer(String customerName, double initialAmount) {
-        this.amount = initialAmount;
-        Customer newCustomer = new Customer(customerName, amount);
-        this.customer.add(newCustomer);
-        System.out.println("The customer name is " + customerName + " and the amount is " + amount);
-    }
 
-    private void addInitialTransaction(double initialAmount) {
-        this.amount = initialAmount;
-    }
-
-    public void additionalTransaction(String customerName, double additionalAmount) {
-        for (int i = 0; i <this.customer.size(); i++) {
-            if (this.customer.get(i).getName() != null) {
-                addInitialTransaction(this.amount += additionalAmount);
-                System.out.println("The customer balance after addition is " + (this.amount + additionalAmount));
+    private Customer findCustomer(String customerName) {
+        for (int i = 0; i < this.customer.size(); i++) {
+            Customer checkedCustomer = this.customer.get(i);
+            if (checkedCustomer.getCustomerName().equals(customerName)) {
+                return checkedCustomer;
             }
+        }
+        return null;
+    }
+
+
+    public boolean additionalTransaction(String branchName, String customerName, double additionalAmount) {
+        Customer existingCustomer = findCustomer(customerName);
+        if (existingCustomer == null) {
+            return false;
+        }
+        existingCustomer.addTransaction(additionalAmount);
+            return true;
+    }
+
+    public void printBranchesList(){
+        ArrayList<Branch> listBranches = new ArrayList<>();
+        for (int i = 0; i <listBranches.size() ; i++) {
+            System.out.println("You have " + listBranches);
 
         }
-
     }
+
 }

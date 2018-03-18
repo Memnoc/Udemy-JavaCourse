@@ -12,9 +12,16 @@ public class Customer {
         this.transaction = new ArrayList<Double>();
     }
 
-    public String getName() {
+    public void addTransaction(double amount) {
+        this.transaction.add(amount);
+    }
+
+
+    public String getCustomerName() {
         return name;
     }
+
+
 
     public ArrayList<Double> getTransaction() {
         return transaction;

@@ -2,16 +2,21 @@ package AutoboxingAndUnboxing.challenge;
 
 public class ChallengeRunner {
 
-    private static Branch branch = new Branch("Ulster Bank Branch");
-    private static Bank bank = new Bank("Ulster Bank");
+
 
     public static void main(String[] args) {
 
+        Bank bank = new Bank("National Australia Bank");
+        Branch branch  =new Branch("Adelaide");
 
-//        branch.addNewCustomer("Matteo", 3.25);
-//        branch.additionalTransaction("Matteo", 2.00);
-//        branch.additionalTransaction("Matteo", 2.00);
-        bank.addNewBranch("BOIbranch");
+//        branch.addNewCustomer("Tim",  50.05);
+        bank.addNewBranch("Ulster");
+//        bank.addCustomerToBranch("Tim", "Ulster", 5.00);
+        branch.printBranchesList();
+
+
+
+
 
 
 
