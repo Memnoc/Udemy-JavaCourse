@@ -15,12 +15,6 @@ public class Player {
         album.addSong("Innuendo1", 3.00);
         album.addSong("Innuendo2", 6.00);
         album.addSong("Innuendo3", 7.00);
-        album.addSong("Innuendo4", 8.00);
-        album.addSong("Innuendo5", 9.00);
-        album.addSong("Innuendo6", 10.00);
-        album.addSong("Innuendo7", 11.00);
-        album.addSong("Innuendo8", 12.00);
-        album.addSong("Innuendo9", 13.00);
         album2.addSong("Nothing else matters", 5.00);
         album2.addSong("Unforgiven", 7.00);
         album2.addSong("Unforgiven II", 9.00);
@@ -30,12 +24,6 @@ public class Player {
         album.addSongsToPlaylist("Innuendo1", playList);
         album.addSongsToPlaylist("Innuendo2", playList);
         album.addSongsToPlaylist("Innuendo3", playList);
-        album.addSongsToPlaylist("Innuendo4", playList);
-        album.addSongsToPlaylist("Innuendo5", playList);
-        album.addSongsToPlaylist("Innuendo6", playList);
-        album.addSongsToPlaylist("Innuendo7", playList);
-        album.addSongsToPlaylist("Innuendo8", playList);
-        album.addSongsToPlaylist("Innuendo9", playList);
         // throws an error if the song is not added to the album first
         album.addSongsToPlaylist("Innuendo10", playList);
 
@@ -46,18 +34,17 @@ public class Player {
 
     private static void printPlaylist(LinkedList<Song> playList) {
         Iterator<Song> i = playList.iterator();
-        Song song = new Song();
         while (i.hasNext()) {
-            System.out.println("Track title: " + i.next().getTitle() + " Duration: " + i.next().getDuration());
+            System.out.println(i.next());
         }
         System.out.println("===================");
     }
 
-    private static void play(LinkedList playList) {
+    private static void play(LinkedList<Song> playList) {
         Scanner scanner = new Scanner(System.in);
         boolean quit = false;
         boolean goingForward = true;
-        ListIterator listIterator = playList.listIterator();
+        ListIterator<Song> listIterator = playList.listIterator();
 
         if (playList.isEmpty()) {
             System.out.println("No songs in the playlist");

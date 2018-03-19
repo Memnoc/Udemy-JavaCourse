@@ -10,10 +10,6 @@ public class Song {
         this.duration = duration;
     }
 
-    public Song() {
-
-    }
-
     public String getTitle() {
         return title;
     }
@@ -24,7 +20,7 @@ public class Song {
 
     @Override
     public String toString() {
-        return title + ": " + duration;
+        return "Title: " + title + " Duration: " + duration;
     }
 
 }
