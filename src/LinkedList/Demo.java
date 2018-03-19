@@ -27,7 +27,7 @@ public class Demo {
 //        placesToVisit.add("Perth");
 //        placesToVisit.add("Canberra");
 //        placesToVisit.add("Adelaide");
-//        placesToVisit.add("Darwin");
+ //       placesToVisit.add("Darwin");
 //
 //        printList(placesToVisit);
 //
