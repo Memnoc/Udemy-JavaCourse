@@ -71,7 +71,7 @@ public class Player {
                         goingForward = true;
                     }
                     if (listIterator.hasNext()) {
-                        System.out.println("Now playing " + listIterator.next());
+                        System.out.println("Now playing " + listIterator.next().toString());
                     } else {
                         System.out.println("Reached the end of the playlist");
                         goingForward = false;
@@ -85,7 +85,7 @@ public class Player {
                         goingForward = false;
                     }
                     if (listIterator.hasPrevious()) {
-                        System.out.println("now playing " + listIterator.previous());
+                        System.out.println("now playing " + listIterator.previous().toString());
                     } else {
                         System.out.println("We are at the start of the playlist");
                         goingForward = true;
