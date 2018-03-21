@@ -1,0 +1,5 @@
+An interface, in Java terms, specifies a method a particular class implementing the interface MUST implement.
+The interface as it is it's defined as "abstract", which means there is no code to the method defined in the interface. The class -
+implementing the interface must provide the code for those methods.
+The idea behind an interface is providing a common behaviour that can be used by several classes by having them all implementing the same interface.
+In other words, it's a way o standardize the way a group of classes behaves.
