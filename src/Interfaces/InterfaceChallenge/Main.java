@@ -8,7 +8,7 @@ public class Main {
     public static void main(String[] args) {
 
         Players matt = new Players("Matteo", 10, 15);
-        Monsters lestat = new Monsters("Lestat", "Ancient Vampire", "Medianic Powers", 789, 1000);
+        Monsters lestat = new Monsters("Lestat", "Ancient Vampire", "Psychic Powers", 789, 1000);
         System.out.println(matt.toString());
         System.out.println(lestat.toString());
         savedObject(matt);
