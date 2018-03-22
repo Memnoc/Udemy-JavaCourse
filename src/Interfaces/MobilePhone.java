@@ -1,29 +1,36 @@
 package Interfaces;
 
-public class DeskPhone implements ITelephone {
+public class MobilePhone implements ITelephone {
 
     private int myNumber;
     private boolean isRinging;
+    private boolean isOn = false;
 
-    public DeskPhone(int myNumber) {
+    public MobilePhone(int myNumber) {
         this.myNumber = myNumber;
+
     }
 
     @Override
     public void powerOn() {
-        System.out.println("no action taken, desk phone does not have a power button");
+        isOn = true;
+        System.out.println("Mobile phone powered up");
     }
 
     @Override
     public void dial(int phoneNumber) {
-        System.out.println("Now ringing " + phoneNumber + " on desk deskphone");
+        if (isOn) {
+            System.out.println("Now ringing " + phoneNumber + " on desk mobile phone");
 
+        } else {
+            System.out.println("Phone is switched off");
+        }
     }
 
     @Override
     public void answer() {
         if (isRinging){
-            System.out.println("Answering desk phone");
+            System.out.println("Answering mobile phone");
             isRinging = false;
         }
 
@@ -31,12 +38,11 @@ public class DeskPhone implements ITelephone {
 
     @Override
     public boolean callPhone(int phoneNumber) {
-        if (phoneNumber == myNumber) {
+        if (phoneNumber == myNumber && isOn) {
             isRinging =  true;
-            System.out.println("Ring ring");
+            System.out.println("Melody playing");
         } else {
             isRinging = false;
-            System.out.println("mobile phone not on or number different");
         }
         return isRinging;
     }
