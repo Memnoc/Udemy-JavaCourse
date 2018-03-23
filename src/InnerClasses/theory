@@ -1,0 +1,19 @@
+In Java, you cna nest a class inside another class.
+
+There are 4 types of nested classes:
+
+A) Static nested class (Mainly used to associate a class with its outer class. The behaviour is identical to a top level class, bu the difference is that is packaged
+in  its outer class, rather than in the package. That really means it cannot access the static methods or memebrs of its outer class without first creating an instance of that class)
+
+B) Non-static nested class (also defined inner class)
+
+C) Local class is an inner class defined inside a scope block.
+They are less common than anonymous classes.
+
+D) Anonymous class is a nested class without a class name.
+It has to be declared and instantiated at the same time because they have no name.
+It is used when a local class is required only once.
+They're very common for attaching event-handlers in a user-interface, best example is programming in Android.
+For example, you have a series of buttons on the screen and each one of them has to be clicked. Using an
+anonymous class in this scenario makes a lot of sense.
+
