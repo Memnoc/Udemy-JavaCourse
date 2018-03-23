@@ -7,7 +7,7 @@ public class Album {
 
     private String name;
     private String artist;
-//  private ArrayList<Song> songs; -> old code, deleted
+//  private ArrayList<Song> songs; -> old code, deleted.
     private SongList songs; // declaring the Song object.
 
 
