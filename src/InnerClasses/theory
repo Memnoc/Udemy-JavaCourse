@@ -2,8 +2,8 @@ In Java, you cna nest a class inside another class.
 
 There are 4 types of nested classes:
 
-A) Static nested class (Mainly used to associate a class with its outer class. The behaviour is identical to a top level class, bu the difference is that is packaged
-in  its outer class, rather than in the package. That really means it cannot access the static methods or memebrs of its outer class without first creating an instance of that class)
+A) Static nested class is mainly used to associate a class with its outer class. The behaviour is identical to a top level class, bu the difference is that is packaged
+in  its outer class, rather than in the package. That really means it cannot access the static methods or members of its outer class without first creating an instance of that class)
 
 B) Non-static nested class (also defined inner class)
 
