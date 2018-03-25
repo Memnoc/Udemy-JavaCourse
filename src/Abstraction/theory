@@ -1,0 +1,9 @@
+Abstraction is defining the required functionality for something, without actually implementing the details.
+In other words, is focusing on what needs to be done, but now it can be done.
+Interfaces, for example, are purely abstract. The implementation does not happen in the interface itself, rather
+happens in the class that implements the interface (hence, the word "implementation");
+
+Java allows defining abstract classes. These are classes that define methods but do not provide any implementation of those methods.
+The implementation is left to the class that inherits from the abstract class.
+
+You cannot directyl instantiate a class that is abstracted in any way.
