@@ -6,4 +6,19 @@ happens in the class that implements the interface (hence, the word "implementat
 Java allows defining abstract classes. These are classes that define methods but do not provide any implementation of those methods.
 The implementation is left to the class that inherits from the abstract class.
 
-You cannot directyl instantiate a class that is abstracted in any way.
+You cannot directly instantiate a class that is abstracted in any way.
+
+Sum up:
+So what is the difference between using an abstract class and an interface?
+
+Abstract class:
+- An abstract class can have member variables that can be inherited (something that can't be done in an interface).
+- The methods of an abstract class can have any visibility (private, protected, etc.)
+- Abstract class can have defined methods (i.e. methods with an implementation)
+
+Interface class:
+- Interfaces can have variables, but they're all public static final variables, which essentially means they're gonna be constant values that never change, with a static scope.
+- They have to be static, because static variables require an instance, and of course you cannot instantiate an interface.
+- Interfaces also cannot have constructors, but abstract classes can.
+- All methods of an interface are automatically public.
+- All methods in an interface are abstract (there is no code in an abstract method, all the code has to be written in the class that is implementing the methods).

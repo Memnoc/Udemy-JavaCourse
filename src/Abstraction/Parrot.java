@@ -6,10 +6,5 @@ public class Parrot extends Bird{
         super(name);
     }
 
-    @Override
-    public void fly() {
-        System.out.println("Fitting from branch to branch");
-    }
-
 
 }
