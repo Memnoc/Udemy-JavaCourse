@@ -46,31 +46,45 @@ public class MyLinkedList {
         Node nodeToReturn = null;
 
         if (size == 0)
-        return null;
+            return null;
         if (size == 1)
         {
             nodeToReturn = head;
             head = null;
             tail = null;
-            size --;
-            }
-            Node node = findNodeBefore(data);
-        if (node != null) {
-            if (tail == node)
+            size--;
+            return nodeToReturn;
+        }
+
+        Node nodeBeforeNodeToDelete = findNodeBefore(data);
+        // case where we need to delete the head
+        if (nodeBeforeNodeToDelete.data == 0) {
+
+            head = head.nextNode;
+            size--;
+        }
+        // case where we found the match
+        else if (nodeBeforeNodeToDelete != null) {
+
+            if (tail.data == data)
             {
+                nodeBeforeNodeToDelete.nextNode = null;
+                tail = nodeBeforeNodeToDelete;
 
+            } else {
+                nodeBeforeNodeToDelete.nextNode = nodeBeforeNodeToDelete.nextNode.nextNode;
             }
-            size --;
-
-
+            size--;
         }
         return null;
 
     }
 
     /**
-     * If this method returns null it means that the element we want to delete is t the head of the LinkedList
-     * If this method returns an empty Node it means that the element we want to delete is at the head of the list
+     * If this method returns an empty Node, it means that the element we want to delete
+     * is t the head of the LinkedList. Returns null if there is no match, and returns
+     * a populated Node if it finds a match.
+     *
      * @param data
      * @return
      */
@@ -88,15 +102,13 @@ public class MyLinkedList {
         Node node = head;
 
         // iterate through our LinkedList
-        while (node.nextNode != null)
-        {
-            node = node.nextNode;
-            if (node.data == data)
+        while (node.nextNode != null) {
+            if (node.nextNode.data == data)
                 return node;
+            node = node.nextNode;
         }
 
         return null;
-
     }
 
     public Node find(int data) {
@@ -114,13 +126,23 @@ public class MyLinkedList {
         Node node = head;
 
         // iterate through our LinkedList
-        while (node.nextNode != null)
-        {
+        while (node.nextNode != null) {
             node = node.nextNode;
             if (node.data == data)
                 return node;
         }
 
         return null;
+    }
+
+    protected void traverse () {
+        if (head != null) {
+            Node node = head;
+            System.out.println(node);
+            while (node.nextNode != null) {
+                node = node.nextNode;
+                System.out.println(node);
+            }
+        }
     }
 }

@@ -13,6 +13,7 @@ public class Main {
         list.add(16);
         list.add(10);
 
+        list.traverse();;
         System.out.println("Does 10 exist in list?" + list.find(10));
         System.out.println("Does 15 exist in list?" + list.find(15));
         System.out.println("Does 16 exist in list?" + list.find(16));
@@ -21,6 +22,15 @@ public class Main {
 
         System.out.println("Deleting 16");
         list.delete(16);
+        list.traverse();
+
+        System.out.println("deleting 10");
+        list.delete(10);
+        list.traverse();
+
+        System.out.println("deleting 15");
+        list.delete(15);
+        list.traverse();
         System.out.println("Does 16 exist in list?" + list.find(16));
 
 
