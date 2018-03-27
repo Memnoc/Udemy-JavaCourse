@@ -1,10 +1,8 @@
 package Abstraction.practice;
 
-import org.junit.jupiter.api.Test;
-
 public class Main {
 
-    @Test
+
     public void test () {
 
         MyLinkedList list = new MyLinkedList();
