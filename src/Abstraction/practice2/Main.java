@@ -12,8 +12,11 @@ public class Main {
         theLinkList.insertFirstLink("Harry Potter", 800);
 
 //        theLinkList.removeLink("Don Quixote");
-//        theLinkList.removeFirst();
-//        theLinkList.display();
+        theLinkList.removeFirst();
+        System.out.println(theLinkList.find("Don Quixote").bookName + " was found");
+        theLinkList.removeLink("Don Quixote");
+
+        theLinkList.display();
 
 
     }
