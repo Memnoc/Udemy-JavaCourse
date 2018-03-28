@@ -1,0 +1,23 @@
+package Abstraction.challenge;
+
+public abstract class ListBooks {
+
+
+    ListBooks next;
+    ListBooks previous;
+    int data;
+
+    public ListBooks(int data) {
+        this.data = data;
+        System.out.println(data);
+    }
+
+    abstract void append(int data);
+
+    abstract ListBooks compareBooksTitle(String title);
+
+    @Override
+    public String toString() {
+        return "" + data;
+    }
+}
