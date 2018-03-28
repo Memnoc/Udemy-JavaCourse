@@ -11,6 +11,8 @@ public class Books extends ListBooks {
     void append(int data) {
         if (head == null) {
             head = new Books(data);
+            System.out.println("Head link: " + head);
+            System.out.println();
             return;
         }
         Books current = head;
@@ -38,6 +40,7 @@ public class Books extends ListBooks {
         if (head == null) return;
         if (head.data == data) {
             head = (Books)head.next;
+            System.out.println("You have deleted the head " + data);
             return;
         }
 
@@ -48,6 +51,17 @@ public class Books extends ListBooks {
                 return;
             }
             current = (Books)current.next;
+        }
+    }
+
+    public void display() {
+        Books current = head;
+        while (current != null) {
+            current.display();
+            System.out.println("Next link: " + current.next);
+
+            current = (Books) current.next;
+            System.out.println();
         }
     }
 }
