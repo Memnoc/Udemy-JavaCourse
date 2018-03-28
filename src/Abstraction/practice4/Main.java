@@ -12,6 +12,8 @@ public class Main {
         bookList.insertLastElement("Memnoc The Devil", 51);
         bookList.insertFirstElement("The Dubliners", 1);
 
+//        https://www.youtube.com/watch?v=iR5wyCaIayk
+
         bookList.display();
 
 
