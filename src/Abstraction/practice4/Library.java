@@ -2,8 +2,8 @@ package Abstraction.practice4;
 
 public abstract class Library {
 
-    public String bookTitle;
-    public int bookScaffold;
+    protected String bookTitle;
+    protected int bookScaffold;
 
     public Library next;
     public Library previous;
@@ -17,12 +17,7 @@ public abstract class Library {
 
     }
 
-    public void display() {
-        System.out.println(bookTitle + ": " + bookScaffold);
-    }
+    public abstract void display();
 
-
-    public String toString() {
-        return bookTitle;
-    }
+    public abstract String toString();
 }

@@ -1,11 +1,10 @@
 package Abstraction.practice4;
 
-import java.awt.print.Book;
-
 public class BookList extends Library implements IBook {
 
     Library firstNode;
     Library lastNode;
+
 
     public BookList(String bookTitle, int bookScaffoldPosition) {
         super(bookTitle, bookScaffoldPosition);
@@ -21,8 +20,10 @@ public class BookList extends Library implements IBook {
 
         BookList newBook = new BookList(title, scaffold);
 
-        if (isEmpty()){
+        if (isEmpty()) {
             lastNode = newBook;
+        } else {
+            firstNode.previous = newBook;
         }
 
         newBook.next = firstNode;
@@ -35,10 +36,9 @@ public class BookList extends Library implements IBook {
         BookList newBook = new BookList(title, scaffold);
 
 
-        if (isEmpty()){
+        if (isEmpty()) {
             firstNode = newBook;
         } else {
-
             lastNode.next = newBook;
             newBook.previous = lastNode;
 
@@ -52,16 +52,79 @@ public class BookList extends Library implements IBook {
     }
 
     @Override
+    public boolean insertAfterNode(String title, int scaffold, int key) {
+        BookList newBook = new BookList(title, scaffold);
+        BookList currentBook = (BookList)firstNode;
+
+        while (currentBook.bookScaffold != key) {
+            currentBook = (BookList)currentBook.next;
+
+            if (currentBook == null) {
+                return false;
+            }
+        }
+
+        if (currentBook == lastNode) {
+
+            newBook.next = null;
+            lastNode = newBook;
+        } else {
+
+            newBook.next = currentBook.next;
+            currentBook.next.previous = newBook;
+        }
+
+        newBook.previous = currentBook;
+        currentBook.next = newBook;
+        return true;
+
+    }
+
+    @Override
+    public void sortInOrder(String title, int position) {
+
+        BookList newBook = new BookList(title, position);
+
+        BookList previousBook = null;
+        BookList currentBook = (BookList)firstNode;
+
+        while ((currentBook != null) && (position > currentBook.bookScaffold)) {
+
+            previousBook = currentBook;
+            currentBook = (BookList)currentBook.next;
+
+        }
+
+        if (previousBook == null){
+            firstNode = newBook;
+        } else {
+            previousBook.next = newBook;
+
+        }
+
+        newBook.next = currentBook;
+
+
+
+    }
+
+
+    @Override
     public void display() {
         Library theLibrary = firstNode;
 
-        while (theLibrary != null){
+        while (theLibrary != null) {
 
-            theLibrary.display();
-            System.out.println("Next Link: " + theLibrary.next);
+            System.out.println("Current Node: " + theLibrary + "\nNext Node: " + theLibrary.next);
+            //System.out.println("Next link: " + theLibrary.next);
             theLibrary = theLibrary.next;
             System.out.println();
 
         }
+    }
+
+    @Override
+    public String toString() {
+        return bookTitle + " " + String.valueOf(bookScaffold);
     }
 }
