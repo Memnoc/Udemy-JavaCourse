@@ -116,7 +116,6 @@ public class BookList extends Library implements IBook {
         while (theLibrary != null) {
 
             System.out.println("Current Node: " + theLibrary + "\nNext Node: " + theLibrary.next);
-            //System.out.println("Next link: " + theLibrary.next);
             theLibrary = theLibrary.next;
             System.out.println();
 
