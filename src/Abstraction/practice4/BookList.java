@@ -6,8 +6,8 @@ public class BookList extends Library implements IBook {
     Library lastNode;
 
 
-    public BookList(String bookTitle, int bookScaffoldPosition) {
-        super(bookTitle, bookScaffoldPosition);
+    public BookList(String bookTitle, int bookShelfPosition) {
+        super(bookTitle, bookShelfPosition);
     }
 
     public BookList() {
@@ -32,8 +32,8 @@ public class BookList extends Library implements IBook {
     }
 
     @Override
-    public void insertLastElement(String title, int scaffold) {
-        BookList newBook = new BookList(title, scaffold);
+    public void insertLastElement(String title, int shelf) {
+        BookList newBook = new BookList(title, shelf);
 
 
         if (isEmpty()) {
@@ -52,11 +52,11 @@ public class BookList extends Library implements IBook {
     }
 
     @Override
-    public boolean insertAfterNode(String title, int scaffold, int key) {
-        BookList newBook = new BookList(title, scaffold);
+    public boolean insertAfterNode(String title, int shelf, int key) {
+        BookList newBook = new BookList(title, shelf);
         BookList currentBook = (BookList)firstNode;
 
-        while (currentBook.bookScaffold != key) {
+        while (currentBook.bookShelf != key) {
             currentBook = (BookList)currentBook.next;
 
             if (currentBook == null) {
@@ -88,7 +88,7 @@ public class BookList extends Library implements IBook {
         BookList previousBook = null;
         BookList currentBook = (BookList)firstNode;
 
-        while ((currentBook != null) && (position > currentBook.bookScaffold)) {
+        while ((currentBook != null) && (position > currentBook.bookShelf)) {
 
             previousBook = currentBook;
             currentBook = (BookList)currentBook.next;
@@ -124,6 +124,6 @@ public class BookList extends Library implements IBook {
 
     @Override
     public String toString() {
-        return bookTitle + " " + String.valueOf(bookScaffold);
+        return bookTitle + " " + String.valueOf(bookShelf);
     }
 }
