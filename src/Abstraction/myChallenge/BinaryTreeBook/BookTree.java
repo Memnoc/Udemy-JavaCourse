@@ -1,6 +1,8 @@
-package Abstraction.practice4.BinaryTreeBook;
+package Abstraction.myChallenge.BinaryTreeBook;
 
 public class BookTree {
+
+
 
     // every tree must have a root value
     public Book root;
@@ -21,11 +23,15 @@ public class BookTree {
             root = newBook;
         } else {
             // if it is not, create a new node
-            // this is the root nod now
+            // this is the root node now
             Book focusBook = root;
-
             // set also the parent for the root
             Book parent;
+            // Check for duplication
+            if (key == focusBook.shelfPosition){
+                System.out.println("This value is a duplicate. Do bot add: " + focusBook.bookTitle + focusBook.shelfPosition);
+                return;
+            }
 
             // check if the new node should go on left or right
             while (true) {
@@ -67,9 +73,7 @@ public class BookTree {
     public void inOrderTraverseTree(Book focusBook) {
         if (focusBook != null) {
             inOrderTraverseTree(focusBook.leftBook);
-
             System.out.println(focusBook);
-
             inOrderTraverseTree(focusBook.rightBook);
         }
     }
@@ -216,6 +220,7 @@ public class BookTree {
 
             // If we get here, the node was never found
             if (focusBook == null) {
+                System.out.println("The book is not in the shelf");
                 return false;
             }
         }

@@ -1,7 +1,7 @@
 package Classes;
 
 // Continuing the lesson on classes, we are now talking about constructors
-// We'll copy over the info from the class used in the challenge ClassPart1Challenge.java
+// We'll copy over the info from the class used in the challengePreparation ClassPart1Challenge.java
 
 public class Account {
 

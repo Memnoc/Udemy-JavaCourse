@@ -1,4 +1,4 @@
-package Abstraction.practice4;
+package Abstraction.myChallenge;
 
 public class BookIterator {
 
@@ -30,7 +30,6 @@ public class BookIterator {
     public boolean hasNext(){
 
         if (currentBook.next != null){
-            //System.out.println("has Next called");
             return true;
         }
         return false;
@@ -50,7 +49,6 @@ public class BookIterator {
 
     public void remove(){
 
-
         if (previousBook == null){
             theBook.firstNode = currentBook.next;
         } else {
@@ -60,8 +58,11 @@ public class BookIterator {
             if (currentBook.next == null){
                 currentBook = theBook.firstNode;
                 previousBook = null;
+            } else if (currentBook == null) {
+                System.out.println("the list is empty");
             } else {
                 currentBook = currentBook.next;
+
             }
         }
 

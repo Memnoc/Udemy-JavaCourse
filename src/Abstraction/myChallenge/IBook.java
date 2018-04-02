@@ -1,4 +1,4 @@
-package Abstraction.practice4;
+package Abstraction.myChallenge;
 
 public interface IBook {
 

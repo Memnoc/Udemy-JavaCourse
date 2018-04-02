@@ -1,4 +1,4 @@
-package Abstraction.practice4;
+package Abstraction.myChallenge;
 
 public abstract class Library {
 
@@ -7,6 +7,8 @@ public abstract class Library {
 
     public Library next;
     public Library previous;
+
+    protected Object value;
 
     public Library(String bookTitle, int bookPosition) {
         this.bookTitle = bookTitle;
@@ -17,7 +19,7 @@ public abstract class Library {
 
     }
 
-    public abstract void display();
 
+    public abstract void display();
     public abstract String toString();
 }

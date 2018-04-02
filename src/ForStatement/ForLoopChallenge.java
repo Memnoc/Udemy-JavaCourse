@@ -1,6 +1,6 @@
 package ForStatement;
 
-// ForLoop: challenge 1
+// ForLoop: challengePreparation 1
 // Using the for statement, call the calculateInterest method with
 // the amount of 10000 with interestRate of 2,3,4,5,6,7 and 8
 // and print the result to the console window.

@@ -1,4 +1,4 @@
-package Abstraction.challenge;
+package Abstraction.challengePreparation;
 
 public abstract class ListBooks {
 
