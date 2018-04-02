@@ -3,8 +3,8 @@ package Abstraction.practice;
 public class Node {
 
 
-    int data; // Type of data stored by the Node
-    Node nextNode; // Node pointer
+    int data; // Type of data stored by the Book
+    Node nextNode; // Book pointer
 
     public Node(int data) {
         this.data = data;

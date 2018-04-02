@@ -4,19 +4,19 @@ public class MyLinkedList {
 
     //  head                                          tail
     //   |                                             |
-    // Node (data) -> Node (data) -> Node (data) -> Node (data)
-    // Add Node
-    // Delete Node
-    // Find Node
+    // Book (data) -> Book (data) -> Book (data) -> Book (data)
+    // Add Book
+    // Delete Book
+    // Find Book
 
     int size = 0;
     Node head;
     Node tail;
 
-    // Things to know when adding a Node:
-    // 1 - Data type (Node node)
-    // 2 - A start point (Node head)
-    // 3 - An end (Node tail)
+    // Things to know when adding a Book:
+    // 1 - Data type (Book node)
+    // 2 - A start point (Book head)
+    // 3 - An end (Book tail)
     public void add(int data) {
 
         Node node = new Node(data);
@@ -26,8 +26,8 @@ public class MyLinkedList {
             head = node;
             tail = node;
         } else {
-            // scenario 2 = non-empty LinkedList -> add Node(10) [Node (15) -> Node (16)]
-            //                                      [Node (15) -> Node (16) -> Node (10)]
+            // scenario 2 = non-empty LinkedList -> add Book(10) [Book (15) -> Book (16)]
+            //                                      [Book (15) -> Book (16) -> Book (10)]
             tail.nextNode = node; // pointing tail to the new node (10)
             tail = node; // updating the old tail to the previous node
         }
@@ -37,8 +37,8 @@ public class MyLinkedList {
     public Node delete(int data) {
         // scenario 1: empty LinkedList
         // scenario 2: non-empty LinkedList
-        // delete Node (10) [Node (15) -> Node (16) -> Node (10)]
-        // We need to go through the list, find Node 10, then delete it
+        // delete Book (10) [Book (15) -> Book (16) -> Book (10)]
+        // We need to go through the list, find Book 10, then delete it
         // We need to implement a find method. However, there are more scenarios to think about.
         // scenario 3: delete element at tail
         // scenario 4: delete element at head
@@ -81,9 +81,9 @@ public class MyLinkedList {
     }
 
     /**
-     * If this method returns an empty Node, it means that the element we want to delete
+     * If this method returns an empty Book, it means that the element we want to delete
      * is t the head of the LinkedList. Returns null if there is no match, and returns
-     * a populated Node if it finds a match.
+     * a populated Book if it finds a match.
      *
      * @param data
      * @return
@@ -98,7 +98,7 @@ public class MyLinkedList {
         if (head.data == data)
             return new Node();
 
-        // assign Node as the iterator
+        // assign Book as the iterator
         Node node = head;
 
         // iterate through our LinkedList
@@ -122,7 +122,7 @@ public class MyLinkedList {
         if (head.data == data)
             return head;
 
-        // assign Node as the iterator
+        // assign Book as the iterator
         Node node = head;
 
         // iterate through our LinkedList
