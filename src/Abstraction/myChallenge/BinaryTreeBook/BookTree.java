@@ -29,7 +29,7 @@ public class BookTree {
             Book parent;
             // Check for duplication
             if (key == focusBook.shelfPosition){
-                System.out.println("This value is a duplicate. Do bot add: " + focusBook.bookTitle + focusBook.shelfPosition);
+                System.out.println("This value is a duplicate. Do not add: " + focusBook.bookTitle + focusBook.shelfPosition);
                 return;
             }
 
