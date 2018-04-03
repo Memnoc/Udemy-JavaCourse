@@ -1,0 +1,3 @@
+Generics allow us to create classes, interfaces and methods that takes types as parameters. These parameters are called "Type parameters".
+
+For example: in ArrayList and LinkedList they are quite common.
