@@ -1,3 +1,5 @@
+// This is the generic class
+
 package Generics;
 
 import java.util.ArrayList;
