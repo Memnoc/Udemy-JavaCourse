@@ -1,4 +1,4 @@
-package Generics.challenge;
+package Generics.practice;
 
 import java.util.ArrayList;
 

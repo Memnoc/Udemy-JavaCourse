@@ -1,4 +1,4 @@
-package Generics.challenge;
+package Generics.practice;
 
 public class Barcelona extends Team {
 
