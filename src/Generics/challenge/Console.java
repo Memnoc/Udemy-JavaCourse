@@ -1,8 +1,9 @@
 package Generics.challenge;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
-public class Console<T extends Game> implements Comparable<Console<T>> {
+public class Console<T extends Game & Comparable<T>> implements Comparable<Console<T>> {
 
     private String model;
     int copiesSold = 0;
@@ -12,6 +13,7 @@ public class Console<T extends Game> implements Comparable<Console<T>> {
     double date = 0.0;
 
     private ArrayList<T> games = new ArrayList<>();
+
 
     public Console(String model) {
         this.model = model;
@@ -32,27 +34,36 @@ public class Console<T extends Game> implements Comparable<Console<T>> {
         }
     }
 
+    public void showChart() {
+        Collections.sort(games);
+        for (T t : games) {
+            System.out.println(getModel() + ": " + ranking());
+        }
+    }
+
     public int numberOfGames(){
-        return games.size();
+        String result = String.valueOf(games.size());
+        return Integer.parseInt(result.toString());
     }
 
     public void mostPopular(Console<T> gameTitle, int gamesSold, int gamesUnsold) {
         String message;
 
+
         if (gamesSold > gamesUnsold){
-            System.out.println( " sold more.");
+            System.out.println( " active");
             sold++;
         } else if (gamesSold == gamesUnsold) {
-            System.out.println(" sold the same.");
+            System.out.println(" draw");
             draw++;
         } else {
-            System.out.println(" sold less");
+            System.out.println(" loss");
                 unsold++;
             }
         }
 
         public int ranking(){
-        return sold;
+        return this.sold;
 
         }
 
@@ -66,13 +77,6 @@ public class Console<T extends Game> implements Comparable<Console<T>> {
                 return 0;
             }
         }
+}
 
-        public void displayChart(Console<T> game) {
-            //Collections.sort(games);
-            for(int i=0; i<games.size(); i++)
-                System.out.println(games.get(i));
-        }
-
-
-    }
 

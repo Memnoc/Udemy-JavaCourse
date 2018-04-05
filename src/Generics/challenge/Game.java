@@ -13,7 +13,4 @@ public abstract class Game {
     }
 
 
-    public <T extends Game> int compareToIgnoreCase(T game2) {
-        return 0;
-    }
 }

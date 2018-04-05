@@ -38,6 +38,9 @@ public class ArrayListScratchPad {
     }
 
 
+
+
+
     // Printing elements:
 
     // Again, we use a method and within it, rwo built-in methods
