@@ -12,7 +12,7 @@ public class Player {
     public void loseHealth(int damage) {
         this.hitPoints = this.hitPoints - damage;
         if (this.hitPoints <= 0) {
-            System.out.println("Player knocked out");
+            System.out.println("Warrior knocked out");
         }
 
     }

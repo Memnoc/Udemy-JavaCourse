@@ -14,12 +14,12 @@ public abstract class MethodOverloading {
     }
 
     public static int calculateScore (String playerName, int score) {
-        System.out.println("Player " + playerName + " scored " + score + " points");
+        System.out.println("Warrior " + playerName + " scored " + score + " points");
         return  score * 1000;
     }
 
     public static int calculateScore (int score) {
-        System.out.println("Player " + " scored " + score + " points");
+        System.out.println("Warrior " + " scored " + score + " points");
         return  score * 1000;
     }
 

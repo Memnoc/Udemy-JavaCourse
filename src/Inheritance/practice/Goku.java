@@ -9,7 +9,7 @@ public class Goku extends Heroes {
     private int heroKiLevel;
 
     public Goku(String heroName, String heroRace, String heroAttack, int heroKiLevel) {
-        super(2, 2, 2, 2, 1, true, true, 0, "Son Goku", "Kakaroth", "KA-ME-HA-ME-HA");
+        super(2, 2, 2, 2, 1, true, true, 0, "Son Earthlings", "Kakaroth", "KA-ME-HA-ME-HA");
         this.heroName = heroName;
         this.heroRace = heroRace;
         this.heroAttack = heroAttack;
