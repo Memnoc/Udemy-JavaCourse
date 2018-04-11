@@ -1,0 +1,85 @@
+# Naming conventions:
+
+**Naming conventions** are useful to make your code easier to read for other people and yourself.
+
+_Things you can name in Java are:_
+
+ -  Packages
+ -  Classes
+ - Interfaces
+ - Methods
+ - Constants
+ -  Variables
+ - Type parameters
+
+_**Packages**_
+
+ - Always lower case
+ - Packages name should be unique
+ - Use your internet domain name, reversed, as a prefix for the package name.
+ - Oracle specify a convention for package names at:
+ https://docs.oracle.com/javase/specs/jls/se10/html/index.html
+
+_**Class names**_
+
+- CamelCase
+- CLass names should be nouns (they represent things)
+- Should start with a capital letter
+- Each word in the name should also start with a capital (e.g. LinkedList)
+
+_**Interface names**_
+
+- Capitalized like class names (CamelCase)
+- Consider what objects implementing the interface will become of what they will be able to do:
+
+          Examples
+            * List
+            * Comparable
+            * Serializeable
+
+_**Method names**_
+
+- mixedCase
+- Often verbs
+- Reflect the function performed or the results returned
+
+            Examples
+            * size()
+            * getName()
+            * addPlayer()
+
+ _**Constants**_
+
+  - ALWAYS UPPER CASE
+  - Separate words with underscore _
+  - Declare using the final keyword
+
+            Examples:
+            * Static final int MAX_INT
+            * Static final short SEVERITY_ERROR
+            * Static final double P1 = 3.141592653
+
+ _**Variable names**_
+
+ - mixedCase
+ - Meaningful and indicative
+ - Start with lower case letter
+ - Do not use underscores _
+
+            Examples:
+            * i
+            * league
+            * sidneySwans
+            * boxLentgh
+
+ _**Type parameters**_
+
+ - Single Character, capital letters
+ - Guidelines given at https://docs.oracle.com/javase/tutorial/extra/TOC.html
+
+            Examples:
+            * E - Element (used extensively by the Java Collections Framework)
+            * K - Key
+            * T - Type
+            * V - Value
+            * S,U,V, etc. - 2nd, 3rd, 4th types

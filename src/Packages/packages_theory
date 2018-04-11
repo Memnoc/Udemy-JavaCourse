@@ -1,0 +1,17 @@
+# Packages
+
+With over 9 million Java developers world wide, **Class or Interface name conflicts are inevitable**.
+A mechanism is needed to fully specify class
+
+It has been thought to allow the use of **classes with the same name in the same project** (or even the same class).
+
+Think about package as a **way of grouping related classes in interfaces together**.
+
+The actual package mechanism provides **a way to manage the space name of object types**, and it also **extends access protection** beyond the traditional access modifiers (public, protected, private, etc.)
+
+## _Reasons to use packages_:
+
+- Programmers can easily tell if classes are related
+- It's easy to know where to fond the classes and interfaces that can provide tge functions provided by the package.
+- Because the package creates a new namespace, class and interface name conflicts are avoided.
+- Classes within the package can have unrestricted access to one another while still restricting access for classes outside the package.
