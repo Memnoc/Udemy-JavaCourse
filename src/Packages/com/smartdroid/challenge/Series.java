@@ -22,11 +22,11 @@ public class Series {
     public static void fibonacci(int n) {
         int a = 0;
         int b = 1;
-        int temp = a+b;
+
 
 
         for (int i = 0; i < n; i++) {
-            temp = (a + b);
+            int temp = (a + b);
             b = a;
             a = temp;
             System.out.println(temp);
