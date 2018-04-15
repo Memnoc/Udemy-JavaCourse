@@ -1,0 +1,43 @@
+#**Access modifiers**
+
+**_Access control is granted either at the top level, or the member level._**
+
+**At the top level**, what you can do is to make your class or interfaces public or packaged private. You cannot define a class private at the top level in Java.
+
+`private` class Test {
+}
+
+The access modifier private here is a mistake, will not be allowed.
+
+**_Only classes, interfaces and enums can exist at the top level, everything else must be included within one of these._**
+
+**public**: the object is visible to all classes everywhere, whether they are in the same package or have imported the package containing the public class.
+
+  At the member level, public has the same meaning as at top level. A public class member (or field) and public method can be accesses from any other class anywhere, even in a different package.
+
+**Package-private**: the object is only available within its own package (and is visible to every class within the same package). Package-private is specified by not specifying, i.e it is the default if you do not specify public. There is not a "package-private" keyword.
+
+  Similarly, Package-private also has the same meaning as it does at top level. An object with no access modifier is visible to every class within the same package (but not to classes in external packages).
+
+**private**: the object is only visible within the class is declared. It is not visible anywhere esle (including in subclasses of its class).
+
+**Protected**: the object is visible anywhere in its own package (like package-private) but also in subclasses even if they are in another package.
+
+**Note about elements and visibility in an interface**: it is not possible to have anything but public methods in an interface. So not matter the lack of an access modifiers, methods are always public in an interface:
+
+`void interfaceMethod(){
+}`
+This is public (despite the theory would suggest it's Package-private)
+
+Same goes for the variables: **all interfaces variables are automatically declared public static final**
+
+`int SOME_CONSTANT = 0;`
+This is public (despite the theory would suggest it's Package-private)
+
+**static**: static method and fields belong to the class, not to any instances of the class. This means that a variable declared static in a class is shared between each and every instances of the class. 
+  As a result, it can be called by referencing the class name rather than a class instance.
+  
+  This explains why the main() method that works as an entry point is static: it needs to be so because there are no instances of the class to call the method on, so Java needs to have a static method that can be called form the class name, rather than from the class instance.
+  
+  There is nothing that prevents a static method from accessing non-static fields and methods in another class.
+  However, a **static methods cannot access non-static methods and fields in its own class**.
