@@ -10,17 +10,32 @@ public class Theatre {
 
 
     public Theatre(String theatreName, int numRows, int seatsPerRow) {
+        //numRows = 7;
         this.theatreName = theatreName;
 
-        int lastRow = 'A' + (numRows -1);
+        int lastRow = 'A' + (numRows - 1);
+        System.out.println(numRows - 1);
+        System.out.println(lastRow);
         for(char row = 'A'; row <= lastRow; row++) {
-            System.out.println(lastRow);
+
             for (int seatNum = 1; seatNum <= seatsPerRow; seatNum++){
                 Seat seat = new Seat(row + String.format("%02d", seatNum));
                 seats.add(seat);
 
             }
         }
+
+
+//        //  (A + 1) = B according to ASCII table in int that is 65 + 1 = 66
+//        int lastRow = 'A' + (numRows -1);    // adding char and int will be int since char is int internally
+//        for (char row = 'A'; row <= lastRow; row++) {    // using char in loop since internally it is int
+//            for(int seatNum = 1; seatNum <= seatsPerRow; seatNum++) {  // nested for loop to generate seat numbers
+//                String seatNumberFormatted = String.format("%02d", seatNum); // formats seatNum with 2 digits and converts to string e.g. "01", "02" etc
+//                String seatNumberString = row + seatNumberFormatted; // adds row to seatNum e.g. A01, A02 etc
+//                Seat seat = new Seat(seatNumberString); // creates a new seat with seatNumberString as param
+//                seats.add(seat);
+//            }
+//        }
         
     }
     public String getTheatreName() {
