@@ -55,9 +55,9 @@ _**Method names**_
   - Declare using the final keyword
 
             Examples:
-            * Static final int MAX_INT
-            * Static final short SEVERITY_ERROR
-            * Static final double P1 = 3.141592653
+            * Final final int MAX_INT
+            * Final final short SEVERITY_ERROR
+            * Final final double P1 = 3.141592653
 
  _**Variable names**_
 
