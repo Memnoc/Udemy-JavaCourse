@@ -1,0 +1,24 @@
+##Maps
+
+The Map interface is part of the Collections Framework even though it's not a true collection, in the true sense of the term.
+
+https://docs.oracle.com/javase/tutorial/collections/interfaces/index.html
+
+The Map interface replaces the obsolete dictionaries abstract class and like the class it replaces, it maps keys to values.
+
+A language dictionary is a classic example of a Map, with the keys being the words in the dictionaries,
+and the values being the definitions.
+
+A java Map cannot:
+
+ - contain duplicate keys
+ - each key can only map to a single value
+ 
+ The two most famous classes that implements Map are Hash and Linked Hash.
+ 
+ Tree Map instead implements the sorted map interface.
+ 
+ Maps, like all the core collection interfaces, are generic, which means they take two types,
+ one for the key, one for the value.
+ It is possible to use raw maps, where the types are not specified, but this is never a good idea.
+ 
