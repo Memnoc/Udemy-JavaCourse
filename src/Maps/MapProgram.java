@@ -31,6 +31,26 @@ public class MapProgram {
 
         System.out.println("===================================================================================");
 
+        // simple removal
+//        languages.remove("Lisp");
+
+        if(languages.remove("Algol", "An algorithmic language")) {
+            System.out.println("Algol removed");
+        } else {
+            System.out.println("Algol not removed, key value paired not found");
+        }
+
+        // Replacing values
+//        System.out.println(languages.replace("Lisp", "a functional programming language with imperative features"));
+//        System.out.println(languages.replace("Scala", "this will not be added"));
+
+        // Replacing values with validation
+        if (languages.replace("Lisp", "this will not work", "a functional programming language with imperative features")) {
+            System.out.println("Lisp replaced");
+        } else {
+            System.out.println("Lisp was not replaced");
+        }
+
         for(String key: languages.keySet()) {
             System.out.println(key + " : " + languages.get(key));
         }
