@@ -38,7 +38,7 @@ public class ArrayChallengeTim {
 //
 //        }
         int[] sortedArray = Arrays.copyOf( array, array.length ); // the code commented above can be replaced by using a built-in method
-        // The method effectively takes a copy of the array with array.length and stores it in sortedAtrray
+        // The method effectively takes a copy of the array with array.length and stores it in sortedArray
         boolean flag = true;
         int temp;
         while (flag) { // the while is gonna continue until flag is true
