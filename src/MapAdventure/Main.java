@@ -53,29 +53,29 @@ public class Main {
             }
 
             Map<String,Integer> exits = locations.get(loc).getExits();
+            String direction = scanner.nextLine().toUpperCase();
+            String[] parts = direction.split(" ");
             System.out.print("Available exits are ");
             for (String exit : exits.keySet()) {
                 System.out.print(exit + ", ");
-            }
-            System.out.println();
+//                if (parts.length == 2 && parts[0].equals("go")) {
+                    if (exits.containsKey(direction) || direction.equals("w") || direction.equals("go west")) {
+                        loc = exits.get(direction);
+                    } else if (exits.containsKey(direction) || direction.equals("e") || direction.equals("go east")) {
+                        loc = exits.get(direction);
+                    } else if (exits.containsKey(direction) || direction.equals("s") || direction.equals("go south")) {
+                        loc = exits.get(direction);
+                    } else if
+                            (exits.containsKey(direction) || direction.equals("n") || direction.equals("go north")) {
+                        loc = exits.get(direction);
 
-            String direction = scanner.nextLine().toUpperCase();
-            String[] parts = direction.split(" ");
-            //if (parts.length == 2 && parts[0].equals("go")) {
-            if (exits.containsKey(direction) || direction.equals("w") || direction.equals("go west")) {
-                loc = exits.get(direction);
-            } else if (exits.containsKey(direction) || direction.equals("e") || direction.equals("go east")) {
-                loc = exits.get(direction);
-            } else if (exits.containsKey(direction) || direction.equals("s") || direction.equals("go south")) {
-                loc = exits.get(direction);
-            } else if (exits.containsKey(direction) || direction.equals("n") || direction.equals("go north")) {
-                loc = exits.get(direction);
-            } else {
-                System.out.println("You cannot go in that direction");
+                    }
+                    System.out.println();
+                    System.out.println("You cannot go in that direction");
+                }
             }
-        }
 
-        // https://stackoverflow.com/questions/33311779/ways-to-create-custom-commands-for-a-text-based-adventure-game
+            // https://stackoverflow.com/questions/33311779/ways-to-create-custom-commands-for-a-text-based-adventure-game
 
 //        String[] road = "You are standing at the end of a road before a small brick building".split(" ");
 //        for (String i : road) {
@@ -88,7 +88,7 @@ public class Main {
 //        for (String i : building) {
 //            System.out.println(i);
 //        }
+        }
     }
 
-}
 
