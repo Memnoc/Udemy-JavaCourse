@@ -1,0 +1,35 @@
+# Maps
+
+ - A map takes two values, a key and a definition.
+ A good example for a comparison is a dictionary, where the key is the word and the value is the definition of that word.
+ As for the nature of the values the Map takes in, they can be anything, from primitive types to objects.
+ 
+### CREATE:
+`` Map<K, V> mapName = new HashMap<>();``
+
+`` Map<String, String> mapName = new HashMap<>();``
+
+`` Map<Integer, String> mapName = new HashMap<>();``
+ 
+### ADD ELEMENTS:
+`` mapName.put(K, V)``
+  
+### GET ELEMENTS:
+`` System.out.print(mapName.get(K));``
+    
+### CHECK IF ELEMENT EXISTS:
+ `` if (mapName.containsKey(k)) {
+ }``
+ 
+### PRINT ELEMENTS:
+`` for (K k : mapName.keySet()) {
+        System.out.print(k + mapName.get(k))``
+        
+### REMOVE ELEMENT:
+`mapName.remove(k);`
+
+### REPLACE ELEMENT
+``System.out.print(mapName.replace(k, v));``
+
+### REPLACE PRE-EXISTENT ELEMENT
+``System.out.print(mapName.replace(k, k(old), v));``
