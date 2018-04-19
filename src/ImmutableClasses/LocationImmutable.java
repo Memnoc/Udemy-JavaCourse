@@ -3,6 +3,8 @@ package ImmutableClasses;
 import java.util.HashMap;
 import java.util.Map;
 
+// https://docs.oracle.com/javase/tutorial/essential/concurrency/imstrat.html
+
 public class LocationImmutable {
 
     private final int locationID;
