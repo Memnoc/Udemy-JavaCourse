@@ -39,6 +39,8 @@ public class LocationImmutable {
     }
 
 
+    // avoiding the code calling this class to have access to this object
+
     public Map<String, Integer> getExits() {
         return new HashMap<String, Integer>(exits);
     }
