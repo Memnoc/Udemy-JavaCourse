@@ -1,0 +1,11 @@
+## Immutable Classes
+
+ - Are classes that cannot be changed
+ - Why to have an immutable class? It's a great way to increase encapsulation and limit changes to the code from external developers.
+ 
+ **Useful Techniques**
+ 
+  - Use getters instead of exposing the object directly from the constructor
+  - Make fields private and final
+  - Do not provide setters (if not strictly needed)
+ 
