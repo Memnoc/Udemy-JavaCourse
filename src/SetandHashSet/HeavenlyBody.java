@@ -23,6 +23,7 @@ public final class HeavenlyBody {
         return orbitalPeriod;
     }
 
+
     public boolean addMoon(HeavenlyBody moon) {
         return this.satellites.add(moon);
     }
@@ -35,7 +36,7 @@ public final class HeavenlyBody {
 
 
     @Override
-    public boolean equals (Object obj) {
+    public boolean equals(Object obj) {
         if (this == obj) {
             return true;
         }
