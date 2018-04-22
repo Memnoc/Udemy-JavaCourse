@@ -18,7 +18,7 @@ public class CompositionRunner {
         thePC.powerUp();
 
         // This is how you call methods from other classes
-        // Basically, you acces the getter that returns the class in for of an object
+        // Basically, you access the getter that returns the class in for of an object
         // This is essentially allowing you to access all the methods for the class
 
         // Having deleted those methods in PC class, we don't need them anymore now

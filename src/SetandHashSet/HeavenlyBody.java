@@ -49,8 +49,12 @@ public final class HeavenlyBody {
         return this.name.equals(objName);
     }
 
+    // equals doc's:
+    // https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#equals-java.lang.Object-
+
     @Override
     public int hashCode() {
-        return super.hashCode();
+        System.out.println("hashCode called");
+        return this.name.hashCode() + 57;
     }
 }
