@@ -16,7 +16,7 @@
   
   - The best performance implementation of a Set is the HashSet.
   
-  ## HashSet
+##### HashSet
   
  This class uses hashes to store the items.
  
@@ -26,3 +26,12 @@
   This is pretty much what HashSet does, and whenever an element is added to the set it becomes a key in the underlying HashMap,
   and a dummy object is stored as the value.
   - Sets can be useful because operations on them are very fast.
+  
+##### Set - Bulk Operations
+
+https://docs.oracle.com/javase/tutorial/collections/interfaces/set.html
+
+In Sets theory two differences are defined:
+
+ - Symmetric difference
+ - Asymmetric difference
