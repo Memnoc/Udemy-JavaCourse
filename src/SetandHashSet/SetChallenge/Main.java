@@ -38,6 +38,10 @@ public class Main {
         temp = new HeavenlyBody("Mars", 687);
         solarSystem.put(temp.getName(), temp);
         planets.add(temp);
+        // Mars
+        temp = new HeavenlyBody("Mars", 687);
+        solarSystem.put(temp.getName(), temp);
+        planets.add(temp);
         // Moons of Mars:
         tempMoon = new HeavenlyBody("Deimos", 1.3);
         solarSystem.put(tempMoon.getName(), tempMoon);
@@ -157,11 +161,5 @@ public class Main {
         for (HeavenlyBody moon : moons){
             System.out.println("\t" + moon.getName());
         }
-
-
-
-
-
-
     }
 }
