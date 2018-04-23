@@ -3,6 +3,7 @@ package SetandHashSet.SetChallenge;
 import java.util.HashSet;
 import java.util.Set;
 
+
 public class HeavenlyBody {
     private final String name;
     private final String type;
@@ -61,8 +62,8 @@ public class HeavenlyBody {
         if ((obj == null) || (obj.getClass() != this.getClass())) {
             return false;
         }
-        String objName = ((HeavenlyBody) obj).getType();
-        return this.type.equals(objName);
+        String objType = ((HeavenlyBody) obj).getType();
+        return this.type.equals(objType);
     }
 
     // equals doc's:
