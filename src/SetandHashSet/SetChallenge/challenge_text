@@ -27,17 +27,17 @@ can be almost every kind of HeavenlyBody).
 ##### Test cases:
         
 1. The planets and moons that we added in the previous video should appear in
-the solarSystem collection and in the sets of moons for the appropriate planets.
+the solarSystem collection and in the sets of moons for the appropriate planets. **done**
 
-2. a.equals(b) must return the same result as b.equals(a) - equals is symmetric.
+2. a.equals(b) must return the same result as b.equals(a) - equals is symmetric. **done**
 
 3. Attempting to add a duplicate to a Set must result in no change to the set (so
-the original value is not replaced by the new one).
+the original value is not replaced by the new one). **done**
 
 4. Attempting to add a duplicate to a Map results in the original being replaced
-by the new object.
+by the new object. **cannot do it**
 
-5. Two bodies with the same name but different designations can be added to the same set.
+5. Two bodies with the same name but different designations can be added to the same set. **done**
 
 6. Two bodies with the same name but different designations can be added to the same map,
-  and can be retrieved from the map.
+  and can be retrieved from the map. **done**

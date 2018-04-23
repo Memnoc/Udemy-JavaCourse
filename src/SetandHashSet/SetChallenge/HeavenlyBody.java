@@ -53,7 +53,7 @@ public class HeavenlyBody {
 
 
     @Override
-    public boolean equals(Object obj) {
+    public final boolean equals(Object obj) {
         if (this == obj) {
             return true;
         }
@@ -70,8 +70,8 @@ public class HeavenlyBody {
     // https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#equals-java.lang.Object-
 
     @Override
-    public int hashCode() {
+    public final int hashCode() {
 //        System.out.println("hashCode called");
-        return this.type.hashCode() + 57;
+        return this.name.hashCode() + 57;
     }
 }
