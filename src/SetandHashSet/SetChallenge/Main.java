@@ -14,15 +14,6 @@ public class Main {
 
     public static void main(String[] args) {
 
-//        // Asteroid belt
-//        HeavenlyBody tempObjects = new HeavenlyBody("Eureka", 690);
-//        asteroidBelt.put(tempObjects.getName(), tempObjects);
-//        asteroids.add(tempObjects);
-////        // Asteroid body type
-////        HeavenlyBody tempAsteroid = new HeavenlyBody("Asteroid", 690);
-////        asteroidBelt.put(tempAsteroid.getName(), tempAsteroid);
-////        tempObjects.addBodyType(tempAsteroid);
-
 
         // Earth
         HeavenlyBody temp = new HeavenlyBody("Earth", 365, "planet");
@@ -32,10 +23,10 @@ public class Main {
 
         //Two bodies with the same name but different designations can be added to the same map,
         //  and can be retrieved from the map. Passed
-        // Earth duplicate
-//        HeavenlyBody tempDuplicate = new HeavenlyBody("Earth", 365, "planetEarth");
-//        solarSystem.put(tempDuplicate.getName(), tempDuplicate);
-//        planets.add(tempDuplicate);
+         //Earth duplicate
+        HeavenlyBody tempDuplicate = new HeavenlyBody("Earth", 365, "dwarf_planet");
+        solarSystem.put(tempDuplicate.getName(), tempDuplicate);
+        planets.add(tempDuplicate);
 
 //**** Tests:
 // Attempting to add a duplicate to a Set must result in no change to the set. Passed
@@ -48,11 +39,23 @@ public class Main {
         // Two bodies with the same name but different designations can be added to the same set. Passed
 
         // Earth - accepted
-//        temp = new HeavenlyBody("Earth", 365, "star");
-//        solarSystem.put(temp.getName(), temp);
-//        planets.add(temp);
+        temp = new HeavenlyBody("Earth", 360, "star");
+        solarSystem.put(temp.getName(), temp);
+        planets.add(temp);
 
-// Test for symmetry. Passed
+
+        // Moons of Earth:
+        HeavenlyBody tempMoon = new HeavenlyBody("Moon", 27, "moon");
+        solarSystem.put(tempMoon.getName(), tempMoon);
+        temp.addMoon(tempMoon);
+
+
+        // Moons of Earth - accepted
+        tempMoon = new HeavenlyBody("Moon", 37, "satellite");
+        solarSystem.put(tempMoon.getName(), tempMoon);
+        temp.addMoon(tempMoon);
+
+        // Test for symmetry. Passed
 
         HeavenlyBody temp1 = new HeavenlyBody("Earth", 365, "planet");
         solarSystem.put(temp.getName(), temp);
@@ -65,17 +68,9 @@ public class Main {
 
         System.out.println(temp1.equals(temp2)); // true
         System.out.println(temp2.equals(temp1)); // true
+        System.out.println(temp2.equals(tempMoon)); // false
+        System.out.println(tempMoon.equals(temp2)); // false
 
-
-        // Moons of Earth:
-        HeavenlyBody tempMoon = new HeavenlyBody("Moon", 365, "moon");
-        solarSystem.put(tempMoon.getName(), tempMoon);
-        temp.addMoon(tempMoon);
-
-//        // Moons of Earth - accepted
-//        tempMoon = new HeavenlyBody("Moon", 365, "satellite");
-//        solarSystem.put(tempMoon.getName(), tempMoon);
-//        temp.addMoon(tempMoon);
 
         // Mars
         temp = new HeavenlyBody("Mars", 687, "planet");
@@ -164,17 +159,17 @@ public class Main {
         // display planets
         System.out.println("Planets");
         for (HeavenlyBody planet : planets){
-            System.out.println("\t" + planet.getName() + " - " + planet.getType());
+            System.out.println("\t" + planet.getName() + " - " + planet.getType() + " : " + planet.getOrbitalPeriod());
         }
 
         // display asteroids
         System.out.println("Asteroids");
         for (HeavenlyBody asteroid : asteroids){
-            System.out.println("\t" + asteroid.getName() + " _ " + asteroid.getType());
+            System.out.println("\t" + asteroid.getName() + " - " + asteroid.getType());
         }
 
         // Displaying Planet + moons
-        HeavenlyBody body = solarSystem.get("Earth");
+        HeavenlyBody body = solarSystem.get("Mars");
         System.out.println("Moons of " + body.getName());
         for (HeavenlyBody earthMoons: body.getSatellites()) {
             System.out.println("\t" + earthMoons.getName());
@@ -199,7 +194,17 @@ public class Main {
         }
         System.out.println("All moons");
         for (HeavenlyBody moon : moons){
-            System.out.println("\t" + moon.getName());
+            System.out.println("\t" + moon.getName() + " - " + moon.getType());
+        }
+
+        // Print the whole solar system
+        System.out.println();
+        System.out.println("The Solar system contains");
+        for (HeavenlyBody heavenlyBody : solarSystem.values()) {
+            System.out.println(heavenlyBody);
         }
     }
+
+
+
 }

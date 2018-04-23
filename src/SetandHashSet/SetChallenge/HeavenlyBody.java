@@ -51,6 +51,10 @@ public class HeavenlyBody {
         return  this.bodyType.add(bodyType);
     }
 
+    @Override
+    public String toString() {
+        return this.name + ": " + this.type + ", "+ this.orbitalPeriod;
+    }
 
     @Override
     public final boolean equals(Object obj) {
