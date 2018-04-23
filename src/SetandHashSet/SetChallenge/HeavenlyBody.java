@@ -5,19 +5,25 @@ import java.util.Set;
 
 public class HeavenlyBody {
     private final String name;
+    private final String type;
     private final double orbitalPeriod;
     private final Set<HeavenlyBody> satellites;
     private final Set<HeavenlyBody> bodyType;
 
-    public HeavenlyBody(String name, double orbitalPeriod) {
+    public HeavenlyBody(String name, double orbitalPeriod, String type) {
         this.name = name;
         this.orbitalPeriod = orbitalPeriod;
         this.satellites = new HashSet<>();
         this.bodyType = new HashSet<>();
+        this.type = type;
     }
 
     public String getName() {
         return name;
+    }
+
+    public String getType() {
+        return type;
     }
 
     public double getOrbitalPeriod() {
@@ -55,8 +61,8 @@ public class HeavenlyBody {
         if ((obj == null) || (obj.getClass() != this.getClass())) {
             return false;
         }
-        String objName = ((HeavenlyBody) obj).getName();
-        return this.name.equals(objName);
+        String objName = ((HeavenlyBody) obj).getType();
+        return this.type.equals(objName);
     }
 
     // equals doc's:
@@ -65,6 +71,6 @@ public class HeavenlyBody {
     @Override
     public int hashCode() {
 //        System.out.println("hashCode called");
-        return this.name.hashCode() + 57;
+        return this.type.hashCode() + 57;
     }
 }
