@@ -24,9 +24,19 @@ public class Main {
 
 
         // Earth
-        HeavenlyBody temp = new HeavenlyBody("Earth", 365, "planet");
+        HeavenlyBody temp = new HeavenlyBody("Earth", 365, "Planet");
         solarSystem.put(temp.getName(), temp);
         planets.add(temp);
+
+        // Earth - rejected
+//        temp = new HeavenlyBody("Earth", 365, "planet");
+//        solarSystem.put(temp.getName(), temp);
+//        planets.add(temp);
+
+        // Earth - accepted
+//        temp = new HeavenlyBody("Earth", 365, "star");
+//        solarSystem.put(temp.getName(), temp);
+//        planets.add(temp);
 
 
         // Moons of Earth:
@@ -36,88 +46,85 @@ public class Main {
 
 
 
-//        // Mars
-//        temp = new HeavenlyBody("Mars", 687);
-//        solarSystem.put(temp.getName(), temp);
-//        planets.add(temp);
-//        // Mars
-//        temp = new HeavenlyBody("Mars", 687);
-//        solarSystem.put(temp.getName(), temp);
-//        planets.add(temp);
-//        // Moons of Mars:
-//        tempMoon = new HeavenlyBody("Deimos", 1.3);
-//        solarSystem.put(tempMoon.getName(), tempMoon);
-//        temp.addMoon(tempMoon);
-//
-//        tempMoon = new HeavenlyBody("Phobos", 0.3);
-//        solarSystem.put(tempMoon.getName(), tempMoon);
-//        temp.addMoon(tempMoon);
-//
-//        // Asteroids of Mars
-//        HeavenlyBody tempAsteroid = new HeavenlyBody("Eureka", 690);
-//        asteroidBelt.put(tempAsteroid.getName(), tempAsteroid);
-//        asteroids.add(tempAsteroid);
-//        tempAsteroid.addBodyType(tempAsteroid);
-//
-//
-//        tempAsteroid = new HeavenlyBody("VF31", 690);
-//        asteroidBelt.put(tempAsteroid.getName(), tempAsteroid);
-//        asteroids.add(tempAsteroid);
-//        tempAsteroid.addBodyType(tempAsteroid);
-//
-//
-//        // Jupiter
-//        temp = new HeavenlyBody("Jupiter", 4332);
-//        solarSystem.put(temp.getName(), temp);
-//        planets.add(temp);
-//        // Moons of Jupiter:
-//        tempMoon = new HeavenlyBody("Io", 1.8);
-//        solarSystem.put(tempMoon.getName(), tempMoon);
-//        temp.addMoon(tempMoon);
-//        tempMoon = new HeavenlyBody("Europa", 3.5);
-//        solarSystem.put(tempMoon.getName(), tempMoon);
-//        temp.addMoon(tempMoon);
-//        tempMoon = new HeavenlyBody("Ganymede", 7.1);
-//        solarSystem.put(tempMoon.getName(), tempMoon);
-//        temp.addMoon(tempMoon);
-//        tempMoon = new HeavenlyBody("Callisto", 16.7);
-//        solarSystem.put(tempMoon.getName(), tempMoon);
-//        temp.addMoon(tempMoon);
-//
-//
-//        // Neptune
-//        temp = new HeavenlyBody("Neptune", 165);
-//        solarSystem.put(temp.getName(), temp);
-//        planets.add(temp);
-//        // Moons of Neptune:
-//
-//
-//        // Saturn
-//        temp = new HeavenlyBody("Saturn", 10795);
-//        solarSystem.put(temp.getName(), temp);
-//        planets.add(temp);
-//        // Moons of Saturn:
-//
-//
-//        // Uranus
-//        temp = new HeavenlyBody("Uranus", 30660);
-//        solarSystem.put(temp.getName(), temp);
-//        planets.add(temp);
-//        // Moons of Uranus:
-//
-//
-//        // Venus
-//        temp = new HeavenlyBody("Venus", 255);
-//        solarSystem.put(temp.getName(), temp);
-//        planets.add(temp);
-//        // Moons of Venus:
-//
-//
-//        // Mercury
-//        temp = new HeavenlyBody("Mercury", 88);
-//        solarSystem.put(temp.getName(), temp);
-//        planets.add(temp);
-//        // Moons of Mercury:
+        // Mars
+        temp = new HeavenlyBody("Mars", 687, "Planet1");
+        solarSystem.put(temp.getName(), temp);
+        planets.add(temp);
+
+        // Moons of Mars:
+        tempMoon = new HeavenlyBody("Deimos", 1.3, "moon");
+        solarSystem.put(tempMoon.getName(), tempMoon);
+        temp.addMoon(tempMoon);
+
+        tempMoon = new HeavenlyBody("Phobos", 0.3, "moon");
+        solarSystem.put(tempMoon.getName(), tempMoon);
+        temp.addMoon(tempMoon);
+
+        // Asteroids of Mars
+        HeavenlyBody tempAsteroid = new HeavenlyBody("Eureka", 690, "asteroid");
+        asteroidBelt.put(tempAsteroid.getName(), tempAsteroid);
+        asteroids.add(tempAsteroid);
+        tempAsteroid.addBodyType(tempAsteroid);
+
+
+        tempAsteroid = new HeavenlyBody("VF31", 690, "asteroid");
+        asteroidBelt.put(tempAsteroid.getName(), tempAsteroid);
+        asteroids.add(tempAsteroid);
+        tempAsteroid.addBodyType(tempAsteroid);
+
+
+        // Jupiter
+        temp = new HeavenlyBody("Jupiter", 4332, "Planet2");
+        solarSystem.put(temp.getName(), temp);
+        planets.add(temp);
+        // Moons of Jupiter:
+        tempMoon = new HeavenlyBody("Io", 1.8, "moon");
+        solarSystem.put(tempMoon.getName(), tempMoon);
+        temp.addMoon(tempMoon);
+        tempMoon = new HeavenlyBody("Europa", 3.5, "moon");
+        solarSystem.put(tempMoon.getName(), tempMoon);
+        temp.addMoon(tempMoon);
+        tempMoon = new HeavenlyBody("Ganymede", 7.1, "moon");
+        solarSystem.put(tempMoon.getName(), tempMoon);
+        temp.addMoon(tempMoon);
+        tempMoon = new HeavenlyBody("Callisto", 16.7, "moon");
+        solarSystem.put(tempMoon.getName(), tempMoon);
+        temp.addMoon(tempMoon);
+
+
+        // Neptune
+        temp = new HeavenlyBody("Neptune", 165, "Planet");
+        solarSystem.put(temp.getName(), temp);
+        planets.add(temp);
+        // Moons of Neptune:
+
+
+        // Saturn
+        temp = new HeavenlyBody("Saturn", 10795, "Planet");
+        solarSystem.put(temp.getName(), temp);
+        planets.add(temp);
+        // Moons of Saturn:
+
+
+        // Uranus
+        temp = new HeavenlyBody("Uranus", 30660, "Planet");
+        solarSystem.put(temp.getName(), temp);
+        planets.add(temp);
+        // Moons of Uranus:
+
+
+        // Venus
+        temp = new HeavenlyBody("Venus", 255, "Planet");
+        solarSystem.put(temp.getName(), temp);
+        planets.add(temp);
+        // Moons of Venus:
+
+
+        // Mercury
+        temp = new HeavenlyBody("Mercury", 88, "Planet");
+        solarSystem.put(temp.getName(), temp);
+        planets.add(temp);
+        // Moons of Mercury:
 
 
 //**************************************************************************************
@@ -126,7 +133,7 @@ public class Main {
         // display planets
         System.out.println("Planets");
         for (HeavenlyBody planet : planets){
-            System.out.println("\t" + planet.getName());
+            System.out.println("\t" + planet.getName() + " - " + planet.getType());
         }
 
         // display asteroids
