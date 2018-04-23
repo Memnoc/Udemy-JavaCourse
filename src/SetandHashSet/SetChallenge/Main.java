@@ -44,7 +44,10 @@ public class Main {
         solarSystem.put(tempMoon.getName(), tempMoon);
         temp.addMoon(tempMoon);
 
-
+//        // Moons of Earth - accepted
+//        tempMoon = new HeavenlyBody("Moon", 365, "satellite");
+//        solarSystem.put(tempMoon.getName(), tempMoon);
+//        temp.addMoon(tempMoon);
 
         // Mars
         temp = new HeavenlyBody("Mars", 687, "Planet1");
@@ -143,7 +146,7 @@ public class Main {
         }
 
         // Displaying Planet + moons
-        HeavenlyBody body = solarSystem.get("Mars");
+        HeavenlyBody body = solarSystem.get("Earth");
         System.out.println("Moons of " + body.getName());
         for (HeavenlyBody earthMoons: body.getSatellites()) {
             System.out.println("\t" + earthMoons.getName());
