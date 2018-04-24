@@ -39,9 +39,17 @@ public class Main {
         // Two bodies with the same name but different designations can be added to the same set. Passed
 
         // Earth - accepted
-        temp = new HeavenlyBody("Earth", 360, "star");
-        solarSystem.put(temp.getName(), temp);
-        planets.add(temp);
+//        temp = new HeavenlyBody("Earth", 360, "star");
+//        solarSystem.put(temp.getName(), temp);
+//        planets.add(temp);
+
+
+        HeavenlyBody tempSun = new HeavenlyBody("Sun", 660, "star");
+        solarSystem.put(tempSun.getName(), tempSun);
+        planets.add(tempSun);
+
+
+
 
 
         // Moons of Earth:
