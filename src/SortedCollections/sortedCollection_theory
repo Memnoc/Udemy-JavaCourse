@@ -1,0 +1,12 @@
+#### Sorted Collections
+
+The link variants of hash and set are called linked hash map and linked hash set.
+The particular thing about these two collections is that they have an order.
+
+The regular ordering of items in a HashSet or HashMap is defined as "chaotic" so the items are ordered randomly.
+The linked version of this two collections uses a LinkedList to order the elements,
+which means that the iterator returns the elements in the order they have been inserted.
+
+
+
+  
