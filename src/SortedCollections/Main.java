@@ -39,6 +39,10 @@ public class Main {
         temp = new StockItem("vase", 8.76, 40);
         stockList.addStock(temp);
 
+        temp = new StockItem("beans", 1.50, 30, 10);
+        stockList.addStock(temp);
+
+
         System.out.println(stockList);
 
         for(String s: stockList.Items().keySet()) {
@@ -48,6 +52,8 @@ public class Main {
         Basket timsBasket = new Basket("Tim");
         sellItem(timsBasket, "car", 1);
         System.out.println(timsBasket);
+
+        sellItem(timsBasket, "beans", 5);
 
         sellItem(timsBasket, "car", 1);
         System.out.println(timsBasket);

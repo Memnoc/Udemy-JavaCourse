@@ -42,8 +42,8 @@ public class StockList {
          - all of it is true, then adjust the stock quantity by deducting what has been sold from the inStock quantity
          - return quantity to indicate that's how many items we are taking out of the stock
          */
-        if ((inStock != null) && (inStock.quantityInStock() >= quantity) && (quantity > 0)) {
-            inStock.adjustStock(- quantity);
+        if ((inStock != null) && (inStock.quantityInStock() >= quantity) && (quantity > 0) && inStock.quantityInStock() >= inStock.getReserved()) {
+            inStock.adjustStock(- quantity + inStock.getReserved());
             return quantity;
         }
         /*
