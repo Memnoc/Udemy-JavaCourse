@@ -4,14 +4,14 @@
 package SortedCollections;
 
 import java.util.Collections;
-import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Map;
 
 public class StockList {
     private final Map<String,StockItem> list;
 
     public StockList() {
-        this.list = new HashMap<>();
+        this.list = new LinkedHashMap<>();
     }
 
     public int addStock(StockItem item) {
@@ -21,12 +21,12 @@ public class StockList {
             // If there are already stocks on this item, adjust the quantity
             if (inStock != item) {
                 // if they are not the same, pass the value of whatever was already in the map into our current item
-                item.adjustStock(inStock.getQuantityInStock());
+                item.adjustStock(inStock.quantityInStock());
             }
 
             // update the item in either case, return the newly update stock quantity
             list.put(item.getName(), item);
-            return item.getQuantityInStock();
+            return item.quantityInStock();
         }
         // return 0 if there has not been stock movements
         return 0;
@@ -37,12 +37,12 @@ public class StockList {
 
         /*
          - if we have stocks
-         - if the getQuantityInStock in stock is greater than the quantity that we are asking for to be sold
+         - if the quantityInStock in stock is greater than the quantity that we are asking for to be sold
          - if the quantity we asked for has to also be greater than 0
          - all of it is true, then adjust the stock quantity by deducting what has been sold from the inStock quantity
          - return quantity to indicate that's how many items we are taking out of the stock
          */
-        if ((inStock != null) && (inStock.getQuantityInStock() >= quantity) && (quantity > 0)) {
+        if ((inStock != null) && (inStock.quantityInStock() >= quantity) && (quantity > 0)) {
             inStock.adjustStock(- quantity);
             return quantity;
         }
@@ -58,21 +58,29 @@ public class StockList {
         return list.get(key);
     }
 
-    public Map<String,StockItem> Items() {
+    public Map<String, StockItem> Items() {
         return Collections.unmodifiableMap(list);
+    }
+
+    public Map<String, Double> priceList() {
+        Map<String, Double> prices = new LinkedHashMap<>();
+        for (Map.Entry<String, StockItem> item : list.entrySet()) {
+            prices.put(item.getKey(), item.getValue().getPrice());
+        }
+        return Collections.unmodifiableMap(prices);
     }
 
     @Override
     public String toString() {
         String s = "\nStock List\n";
         double totalCost = 0.0;
-        for (Map.Entry<String,StockItem> item : list.entrySet()) {
+        for (Map.Entry<String, StockItem> item : list.entrySet()) {
             StockItem stockItem = item.getValue();
 
-            double itemValue = stockItem.getPrice() * stockItem.getQuantityInStock();
+            double itemValue = stockItem.getPrice() * stockItem.quantityInStock();
 
-            s = s + stockItem + ". There are " + stockItem.getQuantityInStock() + " in stock. Value of items: ";
-            s = s + itemValue + "\n";
+            s = s + stockItem + ". There are " + stockItem.quantityInStock() + " in stock. Value of items: ";
+            s = s + String.format("%.2f",itemValue) + "\n";
             totalCost += itemValue;
         }
 
