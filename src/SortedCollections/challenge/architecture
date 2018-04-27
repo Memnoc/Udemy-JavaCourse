@@ -1,0 +1,22 @@
+This is an application that will allow a customer to choose form a list of item, and put those items in a basket.
+
+To do this, I will prepare to Collections:
+
+A - A list of the available items (as in, available in stock)
+
+B - A list of customer has added to the basket
+
+The first piece of the architecture is the Stock Item class.
+In this class I will:
+
+ - store the name, the price and the stock quantity of the items to sell
+ - I will override equals and hashcode
+ - I will implement comparable so that the item can be used in a sorted collection
+ 
+ StockList class:
+ 
+  - is gonna hold a list of all the stock items in a Map
+  - I will add a method to add stock, remove it
+ 
+ Important consideration: because the StockItem class uses a String name to check equality,
+ we can use that as as key for the map in this class 
