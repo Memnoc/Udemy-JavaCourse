@@ -94,11 +94,17 @@ public class Main {
         System.out.println(basket);
         System.out.println(stockList);
 
-
-
-        stockList.Items().get("car").adjustStock(2000);
-        stockList.get("car").adjustStock(-1000);
+        StockItem car = stockList.Items().get("car");
+        if (car != null){
+            car.adjustStock(2000);
+        }
+        if (car != null){
+            stockList.get("car").adjustStock(-1000);
+        }
         System.out.println(stockList);
+//        stockList.Items().get("car").adjustStock(2000);
+//        stockList.get("car").adjustStock(-1000);
+//        System.out.println(stockList);
 //
 
         checkOut(timsBasket);
