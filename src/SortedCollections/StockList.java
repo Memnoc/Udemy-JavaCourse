@@ -37,7 +37,7 @@ public class StockList {
 
         /*
          - if we have stocks
-         - if the quantityInStock in stock is greater than the quantity that we are asking for to be sold
+         - if the availableQuantity in stock is greater than the quantity that we are asking for to be sold
          - if the quantity we asked for has to also be greater than 0
          - all of it is true, then adjust the stock quantity by deducting what has been sold from the inStock quantity
          - return quantity to indicate that's how many items we are taking out of the stock
@@ -79,7 +79,7 @@ public class StockList {
 
             double itemValue = stockItem.getPrice() * stockItem.quantityInStock();
 
-            s = s + stockItem + ". There are " + stockItem.quantityInStock() + " in stock. Value of items: ";
+            s = s + stockItem + ". There are " + stockItem.quantityInStock() +  " in stock. Value of items: ";
             s = s + String.format("%.2f",itemValue) + "\n";
             totalCost += itemValue;
         }

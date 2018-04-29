@@ -19,4 +19,14 @@ In this class I will:
   - I will add a method to add stock, remove it
  
  Important consideration: because the StockItem class uses a String name to check equality,
- we can use that as as key for the map in this class 
+ we can use that as as key for the map in this class
+
+ Basket class:
+
+ This class works as a basket (no way) to store the goods the customer is buying.
+ Since we do not have a DB to do that, the best choice at this point is going for a Map.
+ Since the Map has a data structure of key - value pairs, it is a good candidate to store
+ items with quantity and name.
+
+ Instead fo creating a new customer all the times, it's better to create a new basket for each customer.
+ The StockItem is the key in the Map, and the value is the quantity purchased

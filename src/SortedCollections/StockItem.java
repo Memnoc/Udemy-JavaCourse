@@ -18,13 +18,6 @@ public class StockItem implements Comparable<StockItem> {
         this.quantityStock = quantityStock;
     }
 
-    public StockItem(String name, double price, int quantityStock, int reserved) {
-        this.name = name;
-        this.price = price;
-        this.quantityStock = quantityStock;
-        this.reserved = 0;
-    }
-
     public String getName() {
         return name;
     }
@@ -53,6 +46,7 @@ public class StockItem implements Comparable<StockItem> {
             this.quantityStock = newQuantity;
         }
     }
+
 
     @Override
     public boolean equals(Object obj) {

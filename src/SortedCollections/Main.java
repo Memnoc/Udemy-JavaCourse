@@ -39,7 +39,7 @@ public class Main {
         temp = new StockItem("vase", 8.76, 40);
         stockList.addStock(temp);
 
-        temp = new StockItem("beans", 1.50, 30, 10);
+        temp = new StockItem("beans", 1.50, 30);
         stockList.addStock(temp);
 
 
