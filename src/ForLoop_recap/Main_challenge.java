@@ -1,5 +1,6 @@
 package ForLoop_recap;
 
+//**********************Challenge*********************************//
 //	    int count = 6;
 //        while(count != 6) {
 //            System.out.println("Count value is " + count);
@@ -46,9 +47,50 @@ package ForLoop_recap;
 
 public class Main_challenge {
 
-    private static boolean isEvenNumber = false;
-
     public static void main(String[] args) {
+
+        // Print my name
+
+        int nums = 0;
+
+        while (nums < 3) {
+
+            for (int i = 1; i <= 3; i++) {
+                nums++;
+
+                if (nums == 1) {
+                    System.out.println("Matteo");
+                } else if (nums == 2) {
+                    System.out.println("Genesio");
+                } else {
+                    System.out.println("Stara");
+                    break;
+                }
+
+            }
+
+
+        }
+
+
+        // Small while loop example printing numbers from 6 to 10
+
+        int num = 0;
+
+        while (num < 15) {
+            num++;
+
+            if (num <= 5) {
+                System.out.println("Skipping number " + num);
+                continue;
+            }
+            System.out.println("number= " + num);
+
+            if (num >= 10) {
+                System.out.println("Breaking at " + num);
+                break;
+            }
+        }
 
         int count = 6;
         while (count != 6) {
@@ -97,5 +139,6 @@ public class Main_challenge {
         }
         return true;
     }
+
 
 }
