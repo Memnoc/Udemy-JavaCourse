@@ -7,7 +7,7 @@ package Switch;
 public class Switch {
 
     public static void main(String[] args) {
-        int value = 1;
+        int value = 2;
 
         switch (value) {
             case 1:
