@@ -25,12 +25,16 @@ public class NumberToWords {
 
     public static String numberToWords(int number) {
         int numberReversed = reverse(number);
+        int countNumber = getDigitCount(number);
+        int countReverse = getDigitCount(numberReversed);
+
         if (numberReversed < 0) {
             return "Invalid value";
         }
         StringBuilder str = new StringBuilder("");
         while (numberReversed != 0) {
             int lastDigit = numberReversed % 10;
+            numberReversed /= 10;
             switch (lastDigit) {
                 case 0:
                     str.append("Zero\n");
@@ -63,7 +67,11 @@ public class NumberToWords {
                     str.append("Nine\n");
                     break;
             }
-            numberReversed /= 10;
+
+            for (int difference = countNumber - countReverse; difference >0 ; difference--){
+                System.out.println("Zero");
+            }
+
         }
         return String.valueOf(str);
     }
