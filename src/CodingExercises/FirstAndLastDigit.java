@@ -3,7 +3,7 @@ package CodingExercises;
 public class FirstAndLastDigit {
 
     public static void main(String[] args) {
-//        System.out.println(sumFirstAndLastDigit(252));
+        System.out.println(sumFirstAndLastDigit(252));
 //        System.out.println(sumFirstAndLastDigit(357));
 //        System.out.println(sumFirstAndLastDigit(0));
 //        System.out.println(sumFirstAndLastDigit(5));
