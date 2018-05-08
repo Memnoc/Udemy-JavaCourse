@@ -4,7 +4,7 @@ public class NumberToWords2 {
 
     public static void main(String[] args) {
 
-        System.out.println(getDigitCount(100));
+        //System.out.println(getDigitCount(100));
 //        System.out.println(getDigitCount(123));
 //        System.out.println(getDigitCount(-12));
 //        System.out.println(getDigitCount(5200));
@@ -13,16 +13,19 @@ public class NumberToWords2 {
 //        System.out.println(reverse(1212));
 //        System.out.println(reverse(1234));
 //        System.out.println(reverse(1));
-        System.out.println(reverse(100));
+        //System.out.println(reverse(100));
 
 //        System.out.println(numberToWords(1235567));
 //        System.out.println(numberToWords(1010));
 //        System.out.println(numberToWords(1000));
 //        System.out.println(numberToWords(-12));
-        System.out.println(numberToWords(100));
+        System.out.println(numberToWords(1010));
 
     }
     public static int numberToWords(int number) {
+        if (number <0){
+            System.out.println("Invalid Value");
+        }
         int reverseNumber = reverse(number);
         int countNumber = getDigitCount(number);
         int countReverse = getDigitCount(reverseNumber);
