@@ -23,13 +23,12 @@ public class NumberToWords {
     }
 
     public static int numberToWords(int number) {
-        int reversed = reverse(number);
-        int counter = getDigitCount(number);
-        int counterReversed = getDigitCount(reversed);
-
         if (number < 0) {
             System.out.println("Invalid Value");
         }
+        int reversed = reverse(number);
+        int counter = getDigitCount(number);
+        int counterReversed = getDigitCount(reversed);
 
         while (reversed >= 1) {
             int lastDigit = reversed % 10;
@@ -83,10 +82,17 @@ public class NumberToWords {
         return resultNumber;
     }
 
-    public static int getDigitCount(int number) {
-        if (number < 0)
+    public static int getDigitCount(int num){
+        int count = 0;
+        if(num < 0)
             return -1;
-        return String.valueOf(number).length();
+        while(num >= 10){
+            count++;
+            num /= 10;
+
+        }
+        count ++;
+        return count;
     }
 }
 
