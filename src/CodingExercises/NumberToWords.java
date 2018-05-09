@@ -96,6 +96,53 @@ public class NumberToWords {
     }
 }
 
+/*GORAN solutions to getDigitCount method
+
+
+1 -
+
+public static int getDigitCount(int num){
+    if(num < 0) {
+        return -1;
+    }
+
+    int count = 1;   // starting from 1 since min digits in number is 1
+
+    while(num >= 10){
+        count++;
+        num /= 10;
+
+    }
+    return count;
+}
+Last count ++ looks confusing it is hard to guess why it is there and what it does.
+
+
+2 -
+Another a bit longer solution using for loop could be this
+
+public static int getDigitCount(int number) {
+        if (number < 0) {
+            return -1;
+        }
+
+        if(number == 0) {
+            return 1;
+        }
+
+
+        int count = 0;
+
+        // start from 1 and multiply by 10 each step so i goes 1, 10, 100, 1000
+        // count how many times it was multiplied is the digit count
+        for (int i = 1; i <= number; i *= 10) {
+            count++;
+        }
+
+        return count;
+    }
+ */
+
 
 
 
