@@ -4,7 +4,7 @@ public class NumberToWords2 {
 
     public static void main(String[] args) {
 
-        System.out.println(getDigitCount(0));
+        //System.out.println(getDigitCount(0));
 //        System.out.println(getDigitCount(123));
 //        System.out.println(getDigitCount(-12));
 //        System.out.println(getDigitCount(5200));
@@ -19,7 +19,7 @@ public class NumberToWords2 {
 //        System.out.println(numberToWords(1010));
 //        System.out.println(numberToWords(1000));
 //        System.out.println(numberToWords(-12));
-        numberToWords(10);
+        //numberToWords(10);
 
     }
     public static void numberToWords(int num){
