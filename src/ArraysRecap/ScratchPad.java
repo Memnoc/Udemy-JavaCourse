@@ -168,7 +168,7 @@ public class ScratchPad {
         System.out.println();
         System.out.println("=====Binary Search==============================================================================================================================================================================================================================================");
 
-        int whereIas50 = Arrays.binarySearch(toSort, 1);
+        int whereIas50 = Arrays.binarySearch(toSort, 2);
         System.out.println(whereIas50);
 
     }
