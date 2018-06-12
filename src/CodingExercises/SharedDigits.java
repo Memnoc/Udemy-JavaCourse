@@ -18,3 +18,11 @@ public class SharedDigits {
         return false;
     }
 }
+
+
+
+
+//    int firstLeftDigit = first / 10;
+//    int firstRightDigit = first % 10;
+//    int secondLeftDigit = second / 10;
+//    int secondRightDigit = second % 10;
