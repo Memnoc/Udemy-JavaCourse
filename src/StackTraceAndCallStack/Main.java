@@ -10,7 +10,7 @@ public class Main {
         try {
             int result = divide();
             System.out.println(result);
-        }catch (ArithmeticException e) {
+        } catch (ArithmeticException | NoSuchElementException e) {
             System.out.println(e.toString());
             System.out.println("Unable to perform division");
         }
@@ -18,16 +18,16 @@ public class Main {
 
     private static int divide() {
         int x, y;
-        try {
+//        try {
             x = getInt();
             y =getInt();
             System.out.println("x is " + x + " , y is " + y);
             return x / y;
-        } catch (NoSuchElementException e) {
-            throw new ArithmeticException("no suitable input");
-        } catch (ArithmeticException e) {
-            throw new ArithmeticException("attempt to divide by zero");
-        }
+//        } catch (NoSuchElementException e) {
+//            throw new ArithmeticException("no suitable input");
+//        } catch (ArithmeticException e) {
+//            throw new ArithmeticException("attempt to divide by zero");
+//        }
     }
 
 
