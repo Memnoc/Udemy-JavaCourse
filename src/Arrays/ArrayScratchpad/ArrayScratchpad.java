@@ -95,7 +95,7 @@ public class ArrayScratchpad {
 
         // Initialize values into an Array: Method 4
 
-        // Hard-coding the values into the for-loop is note recommende
+        // Hard-coding the values into the for-loop is note recommended
         // What we can use it's a property called length. which is essentially
         // a field of the Array class that can be used to ensure the loop
         // will go through the whole length of the array.
