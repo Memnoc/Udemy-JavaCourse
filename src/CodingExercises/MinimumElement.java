@@ -27,6 +27,7 @@ public class MinimumElement {
             arr[i] = scan.nextInt();
         }
         return arr;
+
     }
 
     private static int findMin(int[] arr) {
