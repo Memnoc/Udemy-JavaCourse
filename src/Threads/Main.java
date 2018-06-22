@@ -1,7 +1,10 @@
 package Threads;
 
+import java.sql.SQLOutput;
+
 import static Threads.ThreadColor.ANSI_GREEN;
 import static Threads.ThreadColor.ANSI_PURPLE;
+import static Threads.ThreadColor.ANSI_RED;
 
 public class Main {
 
@@ -9,6 +12,7 @@ public class Main {
         System.out.println(ANSI_PURPLE + "Hello from Main Thread");
 
         Thread anotherThread = new AnotherThread();
+        anotherThread.setName(" == Another Thread ==");
         //AnotherThread another =  new AnotherThread(); // good example of polymorphism
         anotherThread.start();
 
@@ -24,7 +28,7 @@ public class Main {
         Thread myRunnableThread = new Thread(new MyRunnable() {
             @Override
             public void run() {
-                super.run();
+                System.out.println(ANSI_RED + "Hello from the anonymous class implementation of run()");
             }
 
         });
