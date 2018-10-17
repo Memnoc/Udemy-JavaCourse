@@ -7,6 +7,8 @@ public class NumberOfDaysInMonth {
 //        System.out.println(isLeapYear(2017));
 //        System.out.println(isLeapYear(2000));
 
+        // small test for github uploading
+
         System.out.println(getDaysInMonth(1, 2020));
         System.out.println(getDaysInMonth(2, 2020));
         System.out.println(getDaysInMonth(2, 2018));
