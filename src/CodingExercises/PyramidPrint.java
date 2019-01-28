@@ -27,8 +27,13 @@ public class PyramidPrint {
                 System.out.print(j + " ");
             }
             System.out.println("");
-
         }
+
+ //        1
+//        1 2
+//       1 2 3
+//      1 2 3 4
+//     1 2 3 4 5
 
         for (int i = 0; i <=5 ; i++) {
             for (int j = 4; j >= i; j--) {
